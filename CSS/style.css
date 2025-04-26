@@ -1,0 +1,443 @@
+/* p{ 
+   
+  background-color: aqua;
+  color: blueviolet;
+
+} */
+
+
+/* CSS Selectors */
+
+
+/* Element selector */
+/* p{
+    border: 2px solid red;
+} */
+
+/* Id selector */
+/* #firstPara{
+    color: green;
+} */
+
+/* Class selector */
+/* .bgBlue{
+    color: yellow;
+    background-color: blue;
+} */
+
+/* Grouping selector */
+/* footer, span{
+    background-color: pink; 
+} */
+
+
+/* Fonts in CSS */
+
+
+/* p {
+  
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px; 
+     line-height: 1.3em;
+
+} */
+
+/* span {
+  
+  font-weight: bold;
+  font-style: italic;
+  
+  } */
+
+
+/* Colors in CSS */
+
+
+/* #firstPara{
+     color:blueviolet; /* Color by name 
+}
+
+ #secondPara{
+      color: rgb(223, 130, 54); /* Color by rgb value 
+}
+#thirdPara{
+      color: white;
+      background-color: #ff4532; /* Color by hex value 
+} */
+
+
+
+/* Borders and Backgrounds */
+
+#firstPara {
+    background-color: red;
+    height: 100px;
+    width: 455px;
+    border: 4px solid green;
+    /* border-width: 4px;
+                border-color: green;
+                border-style: solid;  */
+    border-radius: 11px;
+}
+
+#secondPara {
+    background-color: rgb(58, 243, 98);
+    height: 100px;
+    width: 455px;
+    border-top: 2px solid rgb(231, 22, 231);
+    border-right: 2px solid rgb(18, 10, 133);
+    border-bottom: 2px solid rgba(9, 144, 27, 0.774);
+    border-left: 2px solid rgb(156, 42, 13);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 24px;
+}
+
+#thirdPara {
+    height: 500px;
+    width: 455px;
+   /* background-image: url(); */
+   border: 2px solid red;
+    background-repeat: no-repeat;
+    /* repeat-x and repeat-y will make it repeat on x and y axis */
+    /* background-position: 192px 34px; */
+    background-position: center center;
+    /* background-position: bottom right; */
+    /* background-position: top center; */
+
+}
+
+
+       
+         /* CSS Box Model Margin , Padding  */
+
+
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+  }
+
+body{
+          
+    background-color: #e6cbf8;
+        
+}
+
+        
+.container{
+           
+    background-color: rgb(231, 230, 241);
+           
+    border: 3px solid rgb(64, 6, 119);
+
+    /* We can set margin/padding for  top, bottom, left and right like this */
+           
+    /* padding-top: 79px;
+    
+    padding-bottom: 79px;
+          
+    padding-left: 34px; 
+    padding-right: 79px;*/
+
+    /* margin-top: 3px;
+    margin-bottom: 5px;
+    margin-left: 34px;
+    margin-right:5px ; */
+
+            
+    /* margin = top right bottom left;  */
+           
+    /* padding = top right bottom left;  */
+
+            
+    /* padding: 23px 56px 6px 78px;   */
+           
+    /* margin: 23px 56px 6px 78px;   */
+        
+           
+    /* padding: y(top/bottom) x(left/right); */
+           
+    /* margin: y(top/bottom) x(left/right); */
+           
+    padding: 34px 19px;
+           
+    margin: 14px 19px;
+           
+    border-radius: 23px;
+           
+    width: 533px;
+            
+
+            
+      
+}
+/* Float & Clear in CSS */
+
+/* * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    width: 900px;
+    border: 3px solid purple;
+    background-color: rgb(250, 226, 205);
+    margin: 33px auto;
+}
+
+.item {
+    border: 3px solid grey;
+    margin: 12px 3px;
+    padding: 12px 3px;
+    background: rgb(248, 238, 238);
+}
+
+#fruit {
+    float: right;
+    width: 48%;
+}
+
+#computer {
+    float: left;
+    width: 48%;
+}
+
+#stationary {
+     float: left;
+    clear: both;
+    clear: left;
+    width: 100%;
+}
+
+p,
+h3 {
+    /* text-align: right;
+    text-align: left;
+    text-align: center; 
+    text-align: justify;
+}
+
+h1 {
+    margin: 23px auto;
+    width: 455px;
+}
+ */
+
+
+/* Selectors & Buttons */
+
+
+/* .container {
+    border: 2px solid red;
+    background-color: rgb(223, 245, 201);
+    padding: 34px;
+    margin: 34px auto;
+    width: 666px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(5, 0, 0);
+    background-color: rgb(221, 166, 38);
+}
+
+a:visited {
+    background-color: yellow;
+}
+
+a:active {
+    background-color: darkblue;
+}
+
+.btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: crimson;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: darkgoldenrod;
+    background-color: rgb(223, 245, 201);
+    border: 2px solid black;
+} */
+
+
+/* Creating a navigation menu */
+
+/* .navbar {
+    background-color: black;
+    border-radius: 30px;
+
+}
+
+.navbar ul {
+    overflow: auto;
+}
+
+.navbar li {
+    float: left;
+    list-style: none;
+    margin: 13px 20px;
+
+}
+
+.navbar li a {
+    padding: 3px 3px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar li a:hover {
+    color: red
+}
+
+.search {
+    float: right;
+    color: white;
+    padding: 12px 75px;
+}
+
+.navbar input {
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 3px 17px;
+    width: 129px;
+} */
+
+
+
+/* Display Property */
+
+
+/* * {
+    box-sizing: border-box;
+}
+
+header {
+    border: 2px solid red;
+    margin: auto;
+    width: 1200px;
+}
+
+img {
+    margin: auto;
+    display: block;
+    width: 34px;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+.box {
+    border: 4px solid black;
+    background-color: grey;
+    margin: 4px 0px;
+    padding: 23px;
+    width: 33%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.container {
+    margin: auto;
+    width: 1200px;
+} */
+
+
+
+
+/* Position Property In CSS */
+
+
+/* .container {
+    border: 2px solid black;
+    background-color: khaki;
+    height: 3444px;
+}
+
+ CSS Position: static (default), relative, absolute, fixed, sticky 
+.box {
+    display: inline-block;
+    border: 2px solid red;
+    width: 150px;
+    height: 150px;
+    margin: 2px;
+}
+
+#box3 { 
+    /* relative: Positions the element relative to its normal positon and will leave a gap at its normal position*/
+/* position: relative; */
+
+/* absolute: Positions the element relative to the positon of its first parent*/
+/* position: absolute; */
+
+/* top: 34px;
+                    left: 134px; */
+
+/* fixed: Positions the element relative to the browser window; */
+/* position: fixed;
+                    right: 4px;
+                    bottom: 2px */
+
+/* sticky: Positions the element relative to the users scroll position */
+/* position: sticky;
+    top: 3px;
+
+
+} */
+
+
+
+              /* z-index & visibility */
+
+
+.box {
+    width: 170px;
+    height: 170px;
+    border: 2px solid black;
+}
+
+#box-1 {
+    position: relative;
+    top: 49px;
+    z-index: -35;
+    background-color: green;
+}
+
+#box-2 {
+    position: relative;
+    top: 14px;
+    /* z-index  will work only for position: relative, absolute, fixed or sticky; */
+    z-index: -165;
+    /* will hide the element and the space */
+    /* display: none;  */
+    /* will hide the element but will show its empty space */
+    /* visibility:hidden;  */
+    background-color: red;
+}
+
+#box-3 {
+    background-color: blue;
+}
+
+#box-4 {
+    background-color: yellow;
+}
