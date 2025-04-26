@@ -1,0 +1,50 @@
+button{ 
+    background-color: green;
+ }
+ h1{ 
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Times New Roman';
+ }
+
+ .practice3{ 
+    
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: green;
+}
+.navbar{ 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: black;
+   padding: 10px 20px;
+   color: white;
+   border: 4px solid white;
+
+   
+}
+.navbar a{ 
+   color: white;
+   text-decoration: none;
+   margin: 0px 10px;
+   
+}
+
+.navbar .search-bar {
+   display: flex;
+   align-items: center;
+}
+.navbar input[type="text"] {
+   padding: 5px;
+   margin-right: 5px;
+}
+.navbar button {
+   padding: 5px 10px;
+   background-color: orange;
+   border: none;
+   cursor: pointer;
+   color: white;
+}
