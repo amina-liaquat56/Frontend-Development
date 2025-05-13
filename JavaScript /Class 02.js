@@ -1,4 +1,4 @@
-   //  Comments in JS
+   //  Comments in JavaScript 
 
 // This is single line comment
 
