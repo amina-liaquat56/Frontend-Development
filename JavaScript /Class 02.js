@@ -99,6 +99,9 @@ if (score >= 90) {
 } else {
   console.log("Grade: F");
 }
+let isRaining = true;
+let action = isRaining ? "Take an umbrella" : "Enjoy the sun";
+console.log(action);
 
 
 
