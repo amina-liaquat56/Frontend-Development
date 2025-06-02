@@ -64,9 +64,41 @@ let cond2 = a === 6;
 console.log ("cond1 && cond2 =", cond1 && cond2);
 console.log ("cond1 || cond2 =", cond1 || cond2);
 console.log ("!(6<5) =", ! (a < b));
- 
 
+    // Conditional Statements 
 
+let age = 18;
+if (age >= 18) {
+   console.log ("You are an Adult.");
+}
+
+let mode = "dark";
+let color;
+if  (mode === "dark "){
+    color = "black";
+}
+if ( mode === "light "){
+    color = "white";
+}
+console.log(color);
+
+let temperature = 25;
+if (temperature > 30) {
+  console.log("It's hot outside!");
+} else {
+  console.log("It's not too hot today.");
+}
+
+let score = 85;
+if (score >= 90) {
+  console.log("Grade: A");
+} else if (score >= 80) {
+  console.log("Grade: B");
+} else if (score >= 70) {
+  console.log("Grade: C");
+} else {
+  console.log("Grade: F");
+}
 
 
 
