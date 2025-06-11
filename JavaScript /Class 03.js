@@ -53,3 +53,80 @@ const person = {name: 'Burhan', age: 15};
 for (let key in person) {
   console.log(key, person[key]); 
 }
+
+      // Strings
+
+let str = "Icodeguru";
+let str2 = 'AminaLiaquat';
+console.log(str)
+console.log(str2)
+           // string length
+console.log(str.length)
+console.log(str2.length)
+         // String indices
+let str = "javascrpt";
+
+console.log(str[0]);
+console.log(str[6]);
+
+        // Template literals in JS
+
+let specialString = 'This is a Template Literals';
+console.log(specialString)
+console.log(typeof specialString);
+
+         // String interpolation
+
+let obj = {
+  item:"pen",
+  price: 9,
+};
+let output = `the cost of ${obj.item} is ${obj.price} rupees`;
+console.log(output);
+
+          // escape character
+console.log ("Icode \n Guru")
+console.log ( "Amina \t Liaquat")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
