@@ -69,7 +69,7 @@ let str = "javascrpt";
 console.log(str[0]);
 console.log(str[6]);
 
-        // Template literals in JS
+        // Template literals in Javacsript
 
 let specialString = 'This is a Template Literals';
 console.log(specialString)
