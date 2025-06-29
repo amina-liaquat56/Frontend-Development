@@ -89,6 +89,36 @@ console.log ("Icode \n Guru")
 console.log ( "Amina \t Liaquat")
 
 
+          Strings Method in JS
+
+let name = "Murad"
+console.log(name.length)
+
+console.log(name.toUpperCase())
+
+console.log(name.toLowerCase())
+
+console.log(name.slice(2,4))
+
+console.log(name.slice(2))
+
+console.log(name.replace("Musaa" , "Miral"))
+
+
+// let friend = "Naira"
+// console.log(name.concat(" is a friend of " , friend))
+
+
+// let friend2 = "         Noor             "
+// console.log(friend2.trim())
+
+
+let name2 = "Icodeguru"
+console.log(name2[0])
+console.log(name2[1])
+console.log(name2[2])
+console.log(name2[3])
+console.log(name2[4])
 
 
 
