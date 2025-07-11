@@ -26,4 +26,9 @@ function mythirdfunction( name , age , course){
 
 }
 
-mythirdfunction*("Amina", 24 , "Web Development");
+mythirdfunction("Amina", 24 , "Web Development");
+
+    // Arrow Function
+
+const multiply = (a, b) => a * b;
+console.log(multiply(4, 5)); 
