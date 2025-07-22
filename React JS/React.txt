@@ -1,0 +1,69 @@
+## Syllabus
+- ReactJs features (VirtualDOM , ReConciliation)
+- Local Environemnt Setup (Create-react-app , vite)
+- JSX
+- Class Components
+- Functional Components
+- React Object
+- Fragment
+- Component Styling
+- Conditional rendering
+- Lists & keys
+- Props : de-structuring,requiring props, proptypes,default props
+- State 
+- Pure Component
+- Memo Component
+- HigherOrder Component
+- Events : Synthetic Event
+- Lifecycle Hooks
+- Form
+- Http - Axios
+- Interceptors
+- Routing
+- REDUX  (State Management)
+- Unit Testing (JEST)
+- EsLint
+
+## React Local Setup
+1. download Nodejs and install
+```
+   https://nodejs.org/en/download/
+```
+
+2. check if nodejs is installed? (open cmd and run the below command)
+```
+   node -v 
+```
+
+3. check if NPM is installed? (NPM-Node Package Manager)
+```
+   npm -v    
+```
+```
+   
+```
+4.  go to the folder where you want to create project(d:/sanjay/react)& run the below command	
+	npx create-react-app project1 (npx-node package executer)
+	
+```
+                 
+```
+5. go to the created project folder(project1) and start your React application
+```
+   cd project1
+```
+```
+   npm start 
+```
+```
+  
+```
+6. A new browser window will pop up with your newly created React App! 
+```
+   open a browser tab and type 'http://localhost:3000/' if browser doesn't open automatically.
+```
+```
+   
+```
+```
+   set PORT=3001 && npm start
