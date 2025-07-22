@@ -63,6 +63,50 @@
    open a browser tab and type 'http://localhost:3000/' if browser doesn't open automatically.
 ```
 ```
+React Project with Typescript
+=============================
+-Create React App supports TypeScript out of the box.
+-To create a new project with TypeScript support, run the below command
+ npx create-react-app my-app --template typescript
+-To add TypeScript to an existing Create-React-App project, install the below things
+ npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+ 
+
+create-react-app
+================
+-It is a React application boilerplate generator created by Facebook. 
+-This CLI tool installs React,ReactDOM & other libraries required for a react project.
+-It provides a development environment configured for ease-of-use with minimal setup.
+-It creates a frontend build pipeline. Under the hood, it uses Babel and webpack.
+
+
+
+NPX
+===
+-NPX : node package executer. 
+-Its a Package runner/executer tool.
+-It can execute any package that you want from the npm registry without even installing that package.
+ ex: npx create-react-app my-app
+ 
+
+React app with Vite
+===================
+-Vite.js is a build tool and development server that is designed to optimize the development experience for modern web applications.
+-It includes built-in support for TypeScript, CSS preprocessors.
+
+
+1. Create a vite project
+	npm create vite@latest
+		(OR)
+	npm create vite@latest my-app -- --template react  
+		(OR)
+	npm create vite@latest my-app -- --template react-ts
+	
+2. Go to the crated Project, install , and serve the application
+	cd my-app
+	npm install
+	npm run dev
    
 ```
 ```
