@@ -112,4 +112,73 @@ React app with Vite
    
 ```
 ```
+ 
+What React is
+=============
+-React is a JavaScript library for building user interfaces.
+-It is an open-source, component based library. 
+-It is created & maintained by Facebook.
+-React is used to build single page applications.
+-React allows us to create reusable UI components.
+-ReactJS uses virtual DOM based mechanism to fill in data (views) in HTML DOM. 
+
+
+
+
+React is NOT a framework
+========================
+-React is a library and not a framework.
+-The difference between a library and a framework is that a library only helps 
+ us in one aspect whereas a framework helps us in many aspects. 
+Let's take an example:
+-React is a library because it only takes care of our UI.
+-Angular, on the other hand, is a framework because it handles much more than the UI 
+ (It handles Dependency Injection, CSS encapsulation, httpClient, Form validation, routing etc.)
+
+
+	Framework										Library
+=========================================================================
+-group of libraries to make your work easier	-performs specific, well-defined operations
+-provides ready to use tools,standards			-provides reusable functions for our code
+ templates for fast application development
+-Collection of libraries & APIs					-collection of helper functions,objects
+-cann't be easily replaceable 					-can be easily replaceable by another
+-angular,vue									-jQuery,ReactJs,lodash,moment
+-Hospital with full of doctors					-A doctor who specializes in one 		
+
+
+
+		React						Angular
+===========================================================
+1. Library-2013					 1. Framework-2009
+2. Light-weight					 2. Heavy
+3. JSX + Javascript				 3. HTML + Typescript
+4. Uni-Directional				 4. Two-way
+5. Virtual DOM					 5. Regular DOM
+6. Axios 				 		 6. HttpClientModule 
+7. No 		 					 7. Dependency Injection
+8. No							 8. Form Validation
+9. extra libraries needed		 9. No additional libraries
+10. UI heavy					 10. Functionality Heavy
+
+
+
+
+React Features
+==============
+-Light weight
+-JSX
+-Components  (easy to build, easy to extend,reusable,loosly coupled)
+-Oneway Data Binding (watchers will not be there for bindings)
+-Virtual DOM
+-Easy to learn because of its simple Design
+-Performance
+
+
+
+
+DOM (Document Object Model)
+==========================
+-DOM is a tree-like structure representing the HTML of a web page
+-Allows JavaScript to interact with and modify the page's content, structure, and style. 
 
