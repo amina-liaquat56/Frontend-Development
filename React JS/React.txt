@@ -216,6 +216,11 @@ Diffing: React compares the new Virtual DOM with the previous Virtual DOM, It id
 Reconciliation: Based on diffing results, React calculates the minimal number of real DOM operations needed.
 Real DOM Update: Only the necessary changes are applied to the real DOM, resulting faster updates. 
 
+What is the difference between Shadow DOM and Virtual DOM?
+==========================================================
+-Shadow DOM is a browser technology for scoping variables and CSS in web components. 
+-Virtual DOM is a concept implemented by React on top of browser APIs.
+
 
 
 
