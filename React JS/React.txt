@@ -191,6 +191,17 @@ Why virtual DOM?
  This is where the Virtual DOM comes in.
 -React uses virtual DOM to enhance its performance.
 
+ 
+What Virtual DOM is
+===================
+-A virtual DOM is a lightweight JavaScript object which is just a copy of the
+ real DOM. 
+-It is a node tree that lists the elements, their attributes and content as 
+ Objects and their properties.
+-Virtual DOM is a JavaScript object that mirrors the structure of the real DOM. 
+-A virtual DOM is the DOM where a representation of the UI is kept in memory and synced with the DOM.
+-React never reads from real DOM, only writes to it.
+
 
 
 
