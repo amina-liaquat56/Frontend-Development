@@ -221,6 +221,14 @@ What is the difference between Shadow DOM and Virtual DOM?
 -Shadow DOM is a browser technology for scoping variables and CSS in web components. 
 -Virtual DOM is a concept implemented by React on top of browser APIs.
 
+ReactDOM
+========
+-ReactDOM is the glue between React and the DOM.
+-React creates a virtual representation of your User Interface (what we call a Virtual DOM) and then ReactDOM is the library that efficiently updates the DOM based on the Virtual DOM.
+-The reason why the Virtual DOM exists is to figure out which parts of the UI need to be updated and then batch these changes together. 
+-ReactDOM receives those instructions from React and then efficiently updates the DOM.
+
+
 
 
 
