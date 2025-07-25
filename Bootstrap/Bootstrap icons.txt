@@ -1,0 +1,7 @@
+1. install bootstrap icons library	
+   npm i bootstrap-icons
+2. import bootstrap-icons.css file in to index.js 
+   import 'bootstrap-icons/font/bootstrap-icons.css';
+3. Use class names
+   <i className="bi-alarm"></i>
+   <i className="bi-airplane" style={{ fontSize: "2rem", color: "cornflowerblue" }}></i>
