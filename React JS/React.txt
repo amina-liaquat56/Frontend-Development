@@ -182,3 +182,32 @@ DOM (Document Object Model)
 -DOM is a tree-like structure representing the HTML of a web page
 -Allows JavaScript to interact with and modify the page's content, structure, and style. 
 
+Why virtual DOM?
+===============
+-Frequent DOM manipulations are expensive and performance heavy. 
+-Every time the DOM changes, browser would need to recalculate the CSS, 
+ run layout and repaint the web page.
+-we need a way to minimize the time it takes to repaint the screen. 
+ This is where the Virtual DOM comes in.
+-React uses virtual DOM to enhance its performance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
