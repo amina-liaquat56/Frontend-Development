@@ -241,6 +241,20 @@ React Reconciliation
  the updated state to the screen.
 -It's a step that happens between the render() function being called and the displaying of elements on the screen. This entire process is called reconciliation.
 
+Stack Reconciler < React-16
+================
+-Synchronous
+-works like a stack
+-cann't be interrupted
+
+Fiber Reconciler
+================
+-Fiber is the new reconciliation engine or re-implementation of core algorithm in React v16.
+-React Fiber reconciler makes it possible to divide the work into multiple units of work(incremental rendering).
+-It sets the priority of each work, and makes it possible to pause, reuse, and abort the unit of work.
+-Fiber is Asynchronous.
+-reconciliation and rendering to the DOM weren't separated, and React couldn't pause 
+ its traversal to jump to other renders in between. This often resulted in lagging inputs.
 
 
 
