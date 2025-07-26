@@ -228,6 +228,11 @@ ReactDOM
 -The reason why the Virtual DOM exists is to figure out which parts of the UI need to be updated and then batch these changes together. 
 -ReactDOM receives those instructions from React and then efficiently updates the DOM.
 
+Web Browser Workflow
+====================
+Parsing HTML to construct DOM tree --> Render Tree construction --> Layout of the Render tree -->
+ -->painting the render tree.
+
 
 
 
