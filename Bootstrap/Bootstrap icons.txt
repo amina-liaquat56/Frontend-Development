@@ -1,3 +1,13 @@
+ use Bootstrap
+************************
+1. install bootstrap	
+   npm i bootstrap	
+2. add below 2 lines to index.js file
+   import 'bootstrap/dist/css/bootstrap.min.css';
+   import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+use bootstrap icons 
+
 1. install bootstrap icons library	
    npm i bootstrap-icons
 2. import bootstrap-icons.css file in to index.js 
@@ -5,3 +15,5 @@
 3. Use class names
    <i className="bi-alarm"></i>
    <i className="bi-airplane" style={{ fontSize: "2rem", color: "cornflowerblue" }}></i>
+
+
