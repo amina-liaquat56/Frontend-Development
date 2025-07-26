@@ -233,6 +233,13 @@ Web Browser Workflow
 Parsing HTML to construct DOM tree --> Render Tree construction --> Layout of the Render tree -->
  -->painting the render tree.
 
+React Reconciliation 
+====================
+-Reconciliation is the process through which React updates the DOM.
+ (syncing the Virtual DOM to the actual DOM)
+-Reconciliation is the mechanism that tracks changes in a component state and renders 
+ the updated state to the screen.
+-It's a step that happens between the render() function being called and the displaying of elements on the screen. This entire process is called reconciliation.
 
 
 
