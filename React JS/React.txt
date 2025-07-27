@@ -268,6 +268,15 @@ Fiber Reconciler
  -React tells the DOM to render the changes that was created in the previous phase.
  -the Reconciliation phase can be interrupted, the Commit phase cannot.
 
+React Project - Folder Structure
+================================
+node_modules/	:  Provides npm packages to the entire workspace. Workspace-wide node_modules dependencies are visible to all projects.
+public/ 		:  Only files inside the `public` folder can be referenced from the HTML
+src/			:  Source files for the root-level application project.
+.gitignore		:  Specifies intentionally untracked files that Git should ignore.
+package.json	:  Configures npm package dependencies that are available to all projects in the workspace. 
+package-lock.json : Provides version information for all packages installed into node_modules by the npm client. 
+README.md		 : Introductory documentation for the application.
 
 
 
