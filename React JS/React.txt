@@ -256,6 +256,15 @@ Fiber Reconciler
 -reconciliation and rendering to the DOM weren't separated, and React couldn't pause 
  its traversal to jump to other renders in between. This often resulted in lagging inputs.
 
+-Fiber allows the reconciliation and rendering to the DOM to be split into two separate phases:
+ Phase 1: render(processing)
+ -----------------------
+ -React creates a list of all changes to be rendered in the UI 
+ -Once the list is fully computed, React will schedule these changes to be executed in the next phase.
+ -React doesn't make any actual changes in this phase.
+
+
+
 
 
 
