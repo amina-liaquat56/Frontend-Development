@@ -263,6 +263,11 @@ Fiber Reconciler
  -Once the list is fully computed, React will schedule these changes to be executed in the next phase.
  -React doesn't make any actual changes in this phase.
 
+ Phase 2: Commit
+ ----------------
+ -React tells the DOM to render the changes that was created in the previous phase.
+ -the Reconciliation phase can be interrupted, the Commit phase cannot.
+
 
 
 
