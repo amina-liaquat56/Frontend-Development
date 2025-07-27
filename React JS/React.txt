@@ -278,6 +278,14 @@ package.json	:  Configures npm package dependencies that are available to all pr
 package-lock.json : Provides version information for all packages installed into node_modules by the npm client. 
 README.md		 : Introductory documentation for the application.
 
+React Project Flow
+==================
+1. index.html  --> <div id="root"></div> (container to inject component)
+2. index.js    --> root = ReactDOM.createRoot(document.getElementById('root'));
+				   root.render(<App />)
+                   where        what
+3. App.js      -->  AppComponent Code
+
 
 
 
