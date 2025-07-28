@@ -286,6 +286,23 @@ React Project Flow
                    where        what
 3. App.js      -->  AppComponent Code
 
+JSX
+===
+-JSX (JavaScript Syntax Extension)is a special syntax for React that makes it easier to represent the UI.
+-JSX is used to describe the structure & content of a react component.
+-JSX allows us to add the elements in DOM without using createElement() or appendChild() methods.
+-JSX looks similar to HTML but it is not HTML.
+-JSX code we write gets transformed into React.createElement().
+-JSX is not part of browser. we need a tool(Babel)(a JavaScript compiler) 
+ to transform it to valid JavaScript.
+-JSX doesn't support void tags.
+ <img>  		invalid
+ <img></img>    valid
+ <img /> 		valid
+-Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
+-ex: class becomes className in JSX, and tabindex becomes tabIndex.
+
+
 
 
 
