@@ -318,6 +318,30 @@ return React.createElement("div", {
     class: "test"
   }, "This is a div");
 
+React Element
+=============
+-A React element is a JavaScript object with specific properties and methods that React 
+assigns and uses internally. 
+-React elements are the instructions for how the browser DOM get created. 
+-When we use ReactDOM library React elements are getting changed into DOM elements. 
+-However, when we use React Native, React elements are getting changed into native UI elements of Android or iOS.
+-We create React elements using a function called createElement(). 
+-createElement() method is part of the Top-Level React API, and we use it to create React elements. 
+-This method takes three parameters:
+	a. The first argument defines type of element to create. (h1/p/div)
+	b. The second argument defines properties or attributes of the element.
+	c. The third argument represents the element's children, any nodes or simple text that are inserted between the opening and closing tag.
+	
+const hello = React.createElement(
+	"H1",
+	{id: "msg", className: "title"},
+	"Hello React Element"
+);	
+
+-document.createElement() returns a DOM element (for example a div or an h1). 
+ Whereas React.createElement() returns an object that represents the DOM element.
+ 
+
 
 
 
