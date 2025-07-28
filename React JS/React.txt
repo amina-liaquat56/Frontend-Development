@@ -340,6 +340,17 @@ const hello = React.createElement(
 
 -document.createElement() returns a DOM element (for example a div or an h1). 
  Whereas React.createElement() returns an object that represents the DOM element.
+
+Module Systems
+==============
+1. CommonJS
+   module.exports = {member1,member2};
+   const member1 = require('Library/file name');
+2. ECMASCRIPT
+   export member1;
+   export default member2;
+   import DefaultMember , {Namedmember} from 'file'
+
  
 
 
