@@ -1,0 +1,6 @@
+1. place the image inside 'public' folder
+2. use it in HTML file
+   <img src='images/sachin.jpg' />   
+		(OR)
+1. import sachin from './sachin.jpg'; (OR) const sachin = require('./sachin.jpg') 
+2. <img src={sachin} />
