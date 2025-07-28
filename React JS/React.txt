@@ -302,6 +302,23 @@ JSX
 -Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
 -ex: class becomes className in JSX, and tabindex becomes tabIndex.
 
+React Without JSX
+=================
+-Code written with JSX will be converted to use React.createElement(). 
+-we don't have to use React,createElement() when we use JSX. 
+Syntax : React.createElement(type,[props],[...children])
+example: React.createElement(div , {name:'myDiv'},[<p> , <span>])
+-The first argument is the type of element we're creating
+-The second argument is props object.
+-The last argument is the children of that element.
+
+ex:  <div class='test'>This is a div</div>  
+-Babel converts the above JSX line to the below code
+return React.createElement("div", {
+    class: "test"
+  }, "This is a div");
+
+
 
 
 
