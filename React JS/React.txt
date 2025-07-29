@@ -381,6 +381,28 @@ The React object
 -in cmd run the below command 
  npm view react version
 
+React Emmet (react snippets - plugin)
+===========
+https://marketplace.visualstudio.com/items?itemName=rodrigovallades.es7-react-js-snippets
+
+IMR - import React from 'react';
+IMRD - import ReactDOM from 'react-dom'
+IMRC - import React, { Component } from 'react'
+IMPT -	import PropTypes from 'prop-types'
+RCC - React class component
+RCE - React class Export component
+RFC - React Functional Component
+RFCE - React Functional Export Component
+RMC - React Function Memo component
+RCONST - constructor with super
+RPC - React Class Pure Component
+RPCE - React Class Pure Export Component
+RAFC - React Arrow Function Component
+RAFCE - React Arrow Function export Component
+REN - render() { return( ) }
+SST - this.setState({ })
+
+
  
 
 
