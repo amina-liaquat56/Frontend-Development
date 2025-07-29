@@ -371,6 +371,16 @@ Named Export vs Default Export
 ex: import MyReact, { MyComponent } from "react";
            correct    wrong-namedExport
 
+The React object
+================
+-When we import React,we get a React object that contains methods and properties.
+-React exposes its current version through the version property, here's how we can read that.
+ import React from "react"
+ console.log(React.version); //"16.9.0" / 18.2.0
+ <h2>React Version is {React.version}</h2>
+-in cmd run the below command 
+ npm view react version
+
  
 
 
