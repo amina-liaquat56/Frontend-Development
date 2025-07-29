@@ -351,6 +351,15 @@ Module Systems
    export default member2;
    import DefaultMember , {Namedmember} from 'file'
 
+imports & exports
+=================
+-Default import:
+  import DefaultMember from 'src/my_lib';
+-Named imports:
+  import { name1, name2 } from 'src/my_lib';
+-Combining a default import with named imports
+  import DefaultMember, { name1, name2 } from 'src/my_lib';
+
  
 
 
