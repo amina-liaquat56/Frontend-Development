@@ -412,7 +412,19 @@ extensions
 6. vscode-icons
 7. Thunder Client
 
+Browser extension
+=================
+json viewer
 
+
+
+
+React Plugins
+=============
+1. React Developer Tools
+2. React-sight
+3. Redux DevTools
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
  
 
 
