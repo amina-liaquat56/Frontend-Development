@@ -402,6 +402,16 @@ RAFCE - React Arrow Function export Component
 REN - render() { return( ) }
 SST - this.setState({ })
 
+extensions
+==========
+1. React Snippet
+2. ESLint
+3. prettier
+4. code spell checker
+5. gitlens
+6. vscode-icons
+7. Thunder Client
+
 
  
 
