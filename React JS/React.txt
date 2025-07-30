@@ -444,6 +444,34 @@ React.StrictMode
 Note: StrictMode renders components twice (on dev but not production) in order to
       detect any problems with our code and warn us about them.
 
+Component
+=========
+-Components are the most basic UI building block of a React application.
+-Each Component is responsible for outputting a small,reusable piece of HTML.  
+-A Component Represents a part of the User Interface.
+-Components are Re-Usable and can be nested inside other component.
+-A React application contains a tree of components.
+-React components let you split the UI into independent, reusable pieces, 
+  and think about each piece in isolation. 
+
+
+2 types Of Component
+====================
+1. Functional Component ( stateless/presentational/dumb)
+2. Class Component ( statefull)
+
+-The simplest way to define a component in React is to write a JavaScript function:
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+-we can also use the ES6 class syntax to write components
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
 
 
  
