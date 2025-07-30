@@ -472,6 +472,20 @@ class Welcome extends React.Component {
   }
 }
 
+-A functional component is just a plain JavaScript function which accepts props 
+ as an argument and returns a React element.
+-Functional Components are faster and much simpler than Class Components.
+-Functional components are very useful in React, especially when you want to isolate state management from the component. That’s why they are often called stateless components.
+ 
+-React class components can be defined by extending React.Component or React.PureComponent.
+-React component can be defined as an ES6 class that extends the base React.Component class.
+-a React class component must define a render method that specifies how the component renders to the DOM. 
+-The render method returns React nodes, which can be defined using JSX syntax as HTML-like tags
+-React requires that the first letter of a component class be capitalized. 
+  This is required because based on capitalization JSX can tell the difference between 
+  an HTML tag and a component instance. If the first letter of a name is capitalized, 
+  then JSX realizes it’s a component instance; if not, then it’s an HTML tag.
+
 
 
  
