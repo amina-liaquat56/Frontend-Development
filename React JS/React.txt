@@ -425,6 +425,27 @@ React Plugins
 2. React-sight
 3. Redux DevTools
    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+React.StrictMode
+================
+-StrictMode is a tool for highlighting potential problems in a react application.
+-It activates additional checks and warnings for its descendants(child elements).
+-Strict mode checks are run in development mode only,they do not impact the production build.
+-Strict Mode helps with the below things:
+	Identifying components with unsafe lifecycles (componentWillMount)
+	Warning about legacy string ref API usage
+	Warning about deprecated findDOMNode() usage
+	Detecting unexpected side effects
+	Detecting legacy context API
+-ex: import React, { StrictMode } from "react";
+     <StrictMode>
+		<App />
+     </StrictMode>
+Note: StrictMode renders components twice (on dev but not production) in order to
+      detect any problems with our code and warn us about them.
+
+
+
  
 
 
