@@ -524,6 +524,17 @@ How to use Bootstrap icons
 <i className="bi-alarm"></i>
 <i className="bi-airplane" style={{ fontSize: "2rem", color: "cornflowerblue" }}></i>
 
+How to use React-icons
+======================
+1. install react-icons
+   npm install react-icons
+2. import react-icons in component
+   import { FaEdit, FaTrash } from 'react-icons/fa';
+   import { BsFillCalendarDateFill,BsFillClockFill } from 'react-icons/bs';
+3. use the Icons
+   <FaEdit /> 
+   <FaTrash color='red' />
+
 
 
  
