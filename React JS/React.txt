@@ -486,6 +486,13 @@ class Welcome extends React.Component {
   an HTML tag and a component instance. If the first letter of a name is capitalized, 
   then JSX realizes it’s a component instance; if not, then it’s an HTML tag.
 
+Functional Component 			Class Component
+	---------------------			---------------
+1. No 'this' keyword				1. More feature rich
+2. solution without state			2. Maintain own private data- state
+3. Mainly for UI 					3. Complex UI Logic
+4. Stateless/dumb/Presentational    4. Provide Life cycle hooks
+
 
 
  
