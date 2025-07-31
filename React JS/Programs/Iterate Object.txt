@@ -1,0 +1,35 @@
+import React, { Component } from 'react'
+
+export default class Demo1 extends Component {
+    render() {
+        let employees = [
+            { eId: 101, name: "sanjay", sal: 5000 },
+            { eId: 104, name: "deepak", sal: 8000 },
+            { eId: 103, name: "ranjan", sal: 7000 },
+            { eId: 102, name: "manoj", sal: 9000 }
+        ]
+        return <div className="container">
+            <h2 className='text-center'>Employees Table</h2>
+            <table className="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        employees.map((emp, ind) => (
+                            <tr key={ind}>
+                                {Object.values(emp).map((val, ind) => (
+                                    <td key={ind}>{val}</td>
+                                ))}
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}
