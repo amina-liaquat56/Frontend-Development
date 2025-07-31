@@ -500,6 +500,19 @@ When to use a Class Component over a Function Component?
 -However, from React 16.8 with the addition of Hooks, we can use state , lifecycle methods and other features  that were only available in class component in function component also. 
 -So, it is always recommended to use Function components, unless you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries.
 
+How to Use Bootstrap in a React application
+===========================================
+1. install bootstrap
+   npm i bootstrap@3.3.7 (particular version)
+          OR
+   npm i bootstrap     (latest version)
+   npm i bootstrap-icons 
+   
+	
+2. use 'bootstrap.min.css' in index.js file
+   import "bootstrap/dist/css/bootstrap.min.css";
+   import "bootstrap/dist/js/bootstrap.bundle.min.js";
+   import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 
