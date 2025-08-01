@@ -595,6 +595,26 @@ CSS Modules
 	<button className={styles.error}>Error Button</button>;
 -it will only apply the classname from css module even if both files have same 'error' class;
 
+Conditional Rendering
+=====================
+-It is a common use case to show or hide elements based on certain conditions.
+-It allows us to render different elements or components based on a condition.
+-use cases:
+	Rendering external data from an API.
+	Showing or hiding elements.
+	Toggling application functionality.
+	Implementing permission levels.
+	Handling authentication and authorization.
+-ways to implement conditional rendering:
+	Using an if…else Statement
+	Using a switch Statement
+	Using Ternary Operators
+	Using Logical && (Short Circuit Evaluation) 
+	
+	
+Ternary-  		<div>{flag ? <h1>Helllloooooo</h1> : null}</div>
+Short Circuit-  <div>{flag && <h1>Helllloooooo</h1>}</div>	
+
 
  
 
