@@ -581,6 +581,20 @@ different ways to add CSS:
 4. CSS Modules
 5. Conditional CSS 
 
+CSS Modules
+===========
+-This approach is designed to fix the problem of the global scope in CSS.
+-A CSS Module is a CSS file in which all class names are scoped locally by default.
+-CSS Modules allow to use the same CSS class name in different files without worrying about naming clashes.
+-CSS Modules allow the scoping of CSS by automatically creating a unique classname of the below format.
+	ex: [filename]\_[classname]\_\_[hash]
+-ClassNames are dynamically generated, unique, and mapped to the correct styles.
+-When importing the CSS Module from a JS Module, it exports an object.
+	import styles from './Button.module.css'; // Import css modules stylesheet as styles
+	import './another-stylesheet.css'; // Import regular stylesheet
+	<button className={styles.error}>Error Button</button>;
+-it will only apply the classname from css module even if both files have same 'error' class;
+
 
  
 
