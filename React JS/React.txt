@@ -535,6 +535,30 @@ How to use React-icons
    <FaEdit /> 
    <FaTrash color='red' />
 
+Fragments
+==========
+-While returning elements in JSX, we can only return 1 element at a time.
+ That element can have children but we have to ensure that we are only returning 1 element at a time, or else we will get a syntax error. (ex: a function can return 1 value)
+-Fragments are way to render multiple elements without using a wrapper element.
+-Fragment acts as a wrapper without adding unnecessary divs to the DOM. 
+-We can use it directly from the React import, or deconstruct it.
+	  import React from 'react';
+	  <React.Fragment>
+        <div>I am an element!</div>
+        <button>I am another element</button>
+      </React.Fragment>
+-// Deconstructed
+	import { Fragment } from 'react';
+	<Fragment>
+        <div>I am an element!</div>
+        <button>I am another element</button>
+     </Fragment>
+-React version 16.2 simplified this process further, allowing for empty JSX tags to be interpreted as Fragments
+   <>
+		<div>I am an element!</div>
+		<button>I am another element</button>
+   </>
+
 
 
  
