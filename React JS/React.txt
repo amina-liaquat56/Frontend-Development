@@ -559,6 +559,27 @@ Fragments
 		<button>I am another element</button>
    </>
 
+Data Binding
+============
+-Binding/Displaying  the variable value in UI is called data binding.
+
+
+Binding Type    | Description                 | React Example      
+--------------- | --------------------------- | ------------------ 
+One-way Binding | State → UI                  |  {value}         
+Two-way Binding | State ↔ UI using `onChange` |  value + onChange
+
+
+ 
+
+CSS in React
+============
+different ways to add CSS:
+1. inline CSS
+2. External CSS
+3. global css(index.css)
+4. CSS Modules
+5. Conditional CSS 
 
 
  
