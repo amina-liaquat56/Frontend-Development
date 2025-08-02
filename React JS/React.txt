@@ -712,6 +712,37 @@ Props De-structuring
 -we de-structure props in the render() function.(class Component)
  ex: let { pId, name, price } = this.props.product;
 
+PropTypes
+=========
+-React has some built-in typechecking abilities.
+-To run typechecking on the props for a component,we can assign the special propTypes property.
+-PropTypes exports a range of validators that can be used to make sure the data the component receive is valid.
+-When an invalid value is provided for a prop, a warning will be shown in the browser console. 
+-For performance reasons, propTypes is only checked in development mode.not in production.
+
+1. import PropTypes from 'prop-types';  
+2. ComponentName.propTypes = {	
+		variableName: PropTypes.string	
+	};	
+
+
+  optionalArray: PropTypes.array,
+  optionalBool: PropTypes.bool,
+  optionalFunc: PropTypes.func,
+  optionalNumber: PropTypes.number,
+  optionalObject: PropTypes.object,
+  optionalString: PropTypes.string,
+  optionalSymbol: PropTypes.symbol,
+  optionalElement: PropTypes.element,
+  optionalEnum: PropTypes.oneOf(['News', 'Photos']),
+  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
+  optionalObjectWithShape: PropTypes.shape({
+    color: PropTypes.string,
+    fontSize: PropTypes.number
+  }),
+
+
+
 
 
 
