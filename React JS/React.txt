@@ -613,7 +613,25 @@ Conditional Rendering
 	
 	
 Ternary-  		<div>{flag ? <h1>Helllloooooo</h1> : null}</div>
-Short Circuit-  <div>{flag && <h1>Helllloooooo</h1>}</div>	
+Short Circuit-  <div>{flag && <h1>Helllloooooo</h1>}</div>
+
+List Items - Lists and Keys
+===========================
+-A 'key' is a special attribute which should be included while creating List Items.	
+-There will be a warning message in the console if the key prop is not present on list items.
+-'Key' gives the elements a stable unique Identity.	
+-'Key' helps react to identify which items have changed,are added, or removed.	
+-React relies on the key to identify items in the list.
+ React uses a virtual DOM, and it only re-draws the components that changed since the last render.
+-The first time a component like IdiomaticReactList is rendered, React will see that you want to render a bunch of items, and it will create DOM nodes for them.
+-The next time that component renders, React will say, “I already have some list items on screen are these ones different?” It will avoid recreating DOM nodes if it can tell that the items are the same.
+
+-Tip: Avoid using the index as key, if the list is filtered or sorted 
+ it will cause the key value to change to the new index and React will consider 
+ them different elements and repaint the whole list.
+
+-Why map() is used to iterate array instead of forEach()
+ JSX needs an array of items to render,forEach() does not return anything (i.e it returns undefined). map() returns an array.
 
 
  
