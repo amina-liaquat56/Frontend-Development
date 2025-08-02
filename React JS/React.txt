@@ -677,6 +677,8 @@ forceUpdate
 -Normally we should try to avoid all uses of forceUpdate() and only read from 
  this.props and this.state in render().
 -In class components,this.forceUpdate() is used to force a re-render.
+-In Functional components,there is no concept of force re-render.
+
  
 
 
