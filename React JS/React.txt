@@ -700,7 +700,18 @@ props
 
 1.They are immutable. data coming from the parent should not be changed by child components. we will get an error if you try to change their value.
 2.data with props are being passed in a uni-directional flow. (one way from parent to child)
- 
+
+Props De-structuring
+====================
+-It’s a JavaScript feature that allows us to extract multiple pieces of data from an array or object and assign them to their own variables.
+-Improves readability.
+-we can get rid of props/this.props in front of each property. 
+
+-props de-structuring in functional component
+ export default function Greet({ name, msg }){}
+-we de-structure props in the render() function.(class Component)
+ ex: let { pId, name, price } = this.props.product;
+
 
 
 
