@@ -679,6 +679,27 @@ forceUpdate
 -In class components,this.forceUpdate() is used to force a re-render.
 -In Functional components,there is no concept of force re-render.
 
+
+props
+=====
+-Props are inputs to components.
+-Props stand for properties and is a special keyword in React.
+-Attributes on Components get converted into an object called Props.
+-Helps to Pass custom data to a component.
+-props are used to pass data and methods from a parent component to a child component.
+-data with props are being passed in a uni-directional flow. (one way from parent to child).
+-We can pass props to any component as we declare attributes for any HTML tag
+ <ChildComponent someAttribute={value} anotherAttribute={value}/>
+-React props passed with just their name have a value of true.
+ <myComponent showTitle={true}> 
+ <myComponent showTitle> 
+-The props can be accessed as shown below
+ this.props.propName; (Class Component)
+ props.propName; (Functional Component)
+
+
+1.They are immutable. data coming from the parent should not be changed by child components. we will get an error if you try to change their value.
+2.data with props are being passed in a uni-directional flow. (one way from parent to child)
  
 
 
