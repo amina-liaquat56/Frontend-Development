@@ -633,6 +633,29 @@ List Items - Lists and Keys
 -Why map() is used to iterate array instead of forEach()
  JSX needs an array of items to render,forEach() does not return anything (i.e it returns undefined). map() returns an array.
 
+Read data from a JSON file
+==========================
+1. create a JSON file (employees.json/products.json/countries.json)
+   [ {},{},{} ]
+2. import EmployeeArr from './employees.json'
+3. use EmployeeArr(List data) in JSX
+   {EmployeeArr.map((emp,ind)=>{
+       return <option key={ind} value={emp} />
+   })}
+   
+
+
+Read data from a Javascript file
+================================
+1. create a JSON file (employees.js/products.js/countries.js)
+   const employees = [ {},{},{} ];
+   export default employees;
+2. import EmployeeArr from './employees.json'
+3. use EmployeeArr(List data) in JSX
+   {EmployeeArr.map((emp,ind)=>{
+       return <option key={ind} value={emp} />
+   })}
+
 
  
 
