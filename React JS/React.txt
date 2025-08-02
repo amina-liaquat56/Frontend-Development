@@ -741,6 +741,31 @@ PropTypes
     fontSize: PropTypes.number
   }),
 
+Requiring Props
+===============
+-If prop values are not passed to a certain component, no error will be thrown.
+Instead, within the component that prop will have a value of 'undefined'.
+-Apart from specifying the type of the prop that can be passed to the component, 
+ we can also make sure the prop is always provided to the component by chaining 
+ isRequired at the end of the prop validator.
+
+Student.propTypes = {
+  name: PropTypes.string.isRequired, // Required Prop
+  age: PropTypes.number  // Optional Prop
+}
+
+
+
+Default props
+=============
+-defaultProps allows to set default value for props. 
+-ex: 	
+	Greet.defaultProps = {	
+		msg: 'this is my default message'	
+	}	
+-Functional Component & destructuring
+ export default function Greet({name , msg='good morning'}) {
+ }
 
 
 
