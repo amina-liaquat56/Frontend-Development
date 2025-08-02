@@ -656,7 +656,27 @@ Read data from a Javascript file
        return <option key={ind} value={emp} />
    })}
 
+Assignment
+==========
+1. create products.json with list of products. 
+   https://fakestoreapi.com/products
+2. display the products in table & card
 
+
+
+forceUpdate	
+===========	
+-Declaring class variables/function variables is always a bad idea.	
+-can be used for the below 2 use cases:
+	Setting and clearing timeouts	
+	Storing frequently-referenced values	
+		
+-React components will only re-render when there are changes to props or state.	
+-Updating the class/function variable does not trigger a re-render.	
+-Its our responsibility of triggering the re-render when our class data changes.	
+-Normally we should try to avoid all uses of forceUpdate() and only read from 
+ this.props and this.state in render().
+-In class components,this.forceUpdate() is used to force a re-render.
  
 
 
