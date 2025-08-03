@@ -821,6 +821,13 @@ Why State variables
 Re-rendering : when state variable changes, React re-renders the component with new value
 Persistence : states are persisted accross re-renders
 
+States
+======
+-The State of a component is an object that holds some data that may change over the lifetime of the component.
+-whenever the state object changes,react will re-render the component. 
+-States are Mutable(can be changed), and states are local to the component, cann't be used by other components directly
+-Keep the state minimal , avoid using state for static data. 
+
 
 
 
