@@ -816,6 +816,11 @@ export default function StateDemo1() {
     </>
 }
 
+Why State variables
+===================
+Re-rendering : when state variable changes, React re-renders the component with new value
+Persistence : states are persisted accross re-renders
+
 
 
 
