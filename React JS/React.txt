@@ -798,6 +798,25 @@ Prop Drilling
 -as the components are forced to take in unrelated data and pass it to the next component, until it reaches its destination. This can cause major issues with component reusability and app performance.
 -This Problem Can be avoided by using concepts like 'Context API' & 'REDUX'
 
+Limitations of Local Variables
+==============================
+No re-rendering : Changing a Local variable doesn't re-render, the component won't update to reflect the new value.
+No Persistence : Local variable are re-created on each render, any changes made to them are lost after re-render
+
+export default function StateDemo1() {
+    let count = 0;
+    const increment = ()=>{
+        count++;
+        console.log(count);
+    }
+    return <>
+        <h2>State Demo 1</h2>
+        <div>Count value is: {count}</div>
+        <button onClick={increment}>Increment</button>
+    </>
+}
+
+
 
 
 
