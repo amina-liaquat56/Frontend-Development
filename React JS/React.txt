@@ -780,7 +780,15 @@ Props.children
   }	
 }
 
-
+Ensuring Single Child
+=====================
+-We can use PropTypes.element to enforce that only a single child can be passed 
+ to a component as children.
+-If we try to pass more than 1 child to the component, we will get an error.
+Ex: 	
+Greet.propTypes = {	
+    children: PropTypes.element	
+};
 
 
 
