@@ -767,6 +767,18 @@ Default props
  export default function Greet({name , msg='good morning'}) {
  }
 
+Props.children	
+==============	
+-props.children represents the content between the tags of a Component.
+-props.children can be an array or a single item.
+-props.children is available on every component.	
+-<Welcome>Hello world!</Welcome>	
+-The string Hello world! is available in props.children in the Welcome component.	
+-class Welcome extends React.Component {	
+  render() {	
+    return <p>{this.props.children}</p>;	
+  }	
+}
 
 
 
