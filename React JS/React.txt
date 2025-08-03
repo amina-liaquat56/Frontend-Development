@@ -828,6 +828,21 @@ States
 -States are Mutable(can be changed), and states are local to the component, cann't be used by other components directly
 -Keep the state minimal , avoid using state for static data. 
 
+State in Class Component
+========================
+-class components have a state object , where all the state variables are declared. 
+ To update state variables, setState() should be used;
+-State object is usually initialized inside the constructor in class components.
+-UI will not Re-render when we change state directly, setState() should be used.
+  this.counter = this.counter + 1; // re-render won't happpen
+  this.setState({counter:this.state.counter+1});  // re-render will happpen
+-use setState() to change the state of react Component. 
+ it ensures that render() gets called.
+-If a piece of code needs to be executed only after the state has been updated, then 
+ place that code in the callback function which is the second arguement to setState()
+ Syntax: setState( StateObject, callbackFunction);
+  ex:    setState( {} , ()=>{} );
+ 
 
 
 
