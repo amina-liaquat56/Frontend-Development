@@ -842,6 +842,15 @@ State in Class Component
  place that code in the callback function which is the second arguement to setState()
  Syntax: setState( StateObject, callbackFunction);
   ex:    setState( {} , ()=>{} );
+
+Note:
+-----
+-setState() actions are asynchronous. setState() doesn’t immediately mutate this.state.
+-React may group multiple setState() calls in to a single update for better performance
+-when we want to update the state based on the previous State value,
+ we need to pass a function as an arguement to setState() instead passing an object.
+ ex:- this.setState({ value: this.state.value + 1 });   
+      this.setState(prevState => ({ value: prevState.value + 1 })); 
  
 
 
