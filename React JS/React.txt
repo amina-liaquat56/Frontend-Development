@@ -851,6 +851,25 @@ Note:
  we need to pass a function as an arguement to setState() instead passing an object.
  ex:- this.setState({ value: this.state.value + 1 });   
       this.setState(prevState => ({ value: prevState.value + 1 })); 
+
+State in Functional Component
+=============================
+-State in functional Component can be maintained using useState() hook.
+-useState() is used to declare a state variable in function component.
+-The only argument to the useState() Hook is the initial state.
+-It returns a pair of values: 
+  a. State value
+  b. function to update that state value. 
+  ex: const [count, setCount] = useState(0);
+-state updation is asynchronous, 
+   const increment = () => {
+    setCount(count + 1);
+	console.log(count);  // this will be executed before state update
+  };
+-If a piece of code needs to be executed only after the state has been updated, then place that code in the 'useEffect()'
+-when we want to update the state based on the previous State value,pass a callBack to setter
+ ex: setCount((prevState) => prevState + 1);
+	 setCount(count + 1);
  
 
 
