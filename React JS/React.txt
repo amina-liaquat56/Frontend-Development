@@ -790,6 +790,15 @@ Greet.propTypes = {
     children: PropTypes.element	
 };
 
+Prop Drilling
+=============
+-Prop drilling is the process in a React app where props are passed from one component to another by going through other parts that do not need the data, but only help in passing it through the intermediate components.
+-The problem with this approach is that most of the components through which this data is passed have no actual need for this data. 
+-They are simply used as mediums for transporting this data to its destination component.
+-as the components are forced to take in unrelated data and pass it to the next component, until it reaches its destination. This can cause major issues with component reusability and app performance.
+-This Problem Can be avoided by using concepts like 'Context API' & 'REDUX'
+
+
 
 
 
