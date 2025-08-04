@@ -1015,6 +1015,36 @@ React Events
         console.log(this.state.counter)
     }
 
+-If you want to send parameters into an event handler, you have two options:
+1. Make an anonymous arrow function:
+	shoot = (a) => {
+     alert(a);
+   }
+   <button onClick={() => this.shoot("Goal")}>Take the shot!</button>
+   
+
+2. Bind the event handler to this
+   shoot(a) {
+    alert(a);
+  }
+  <button onClick={this.shoot.bind(this, "Goal")}>Take the shot!</button>
+  
+
+-If you send arguments without using the bind method, (this.shoot(this, "Goal") instead of this.shoot.bind(this, "Goal")), 
+the shoot function will be executed when the page is loaded instead of waiting for the button to be clicked.
+ 
+ 
+Single Event Handler for multiple input elements	
+=================================================	
+ changeHandler = (e) => {
+    const { name, value } = e.target;
+    this.setState({ [name]: +value });
+  }; 
+================================= 
+let [obj, setObj] = useState({ num1: 0, num2: 0 });
+const changeHandler = (e) => {
+   setObj({ ...obj, [e.target.name]: +e.target.value })
+}
 
 
 
