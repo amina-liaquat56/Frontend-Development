@@ -1046,6 +1046,22 @@ const changeHandler = (e) => {
    setObj({ ...obj, [e.target.name]: +e.target.value })
 }
 
+SyntheticEvent
+==============
+-SyntheticEvent is a cross-browser wrapper around the browser’s native event.
+-in React event handlers receive 'SyntheticEvent' object as arguement insteadof browser's native 'Event' object.
+
+-To register an event handler for the capture phase, append Capture to the event name.
+  <button onClick={f1}>click me</button>  // bubbling
+  <button onClickCapture={f1}>click me</button>  // capturing
+ 
+  <div onClickCapture={() => console.log('div clicked')}>
+            div <br/>
+            <span onClickCapture={() => console.log('span clicked')}>
+                Span <br/>
+                <button onClickCapture={() => console.log('button clicked')}>button</button>
+            </span>
+	</div>
 
 
 
