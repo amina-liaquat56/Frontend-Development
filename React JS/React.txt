@@ -870,7 +870,14 @@ State in Functional Component
 -when we want to update the state based on the previous State value,pass a callBack to setter
  ex: setCount((prevState) => prevState + 1);
 	 setCount(count + 1);
- 
+ Props        		  vs 					State
+=======================================================================
+1. Props are immutable.					1. State is mutable/modifiable.
+2. pass data from parent component 		2. contains own data & changes over time
+   to child component
+3. communicate between components		3. rendering dynamic changes
+4. props - Functional Comp				4. useState()      - Functional Comp
+   this.props - class comp		  		   this.state={}   - Class Comp
 
 
 
