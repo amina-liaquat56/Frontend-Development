@@ -879,6 +879,34 @@ State in Functional Component
 4. props - Functional Comp				4. useState()      - Functional Comp
    this.props - class comp		  		   this.state={}   - Class Comp
 
+Assignments: 
+1. Have a paragraph & a toggle button, on click of the button control the visibility(Show/Hide) of the paragraph
+2. Create a text-area with maxLength=100, as the user keeps typing display updated Remaining characters.
+3. Create dropdown with state names, when user changes dropdown value, print the selected (stateName)dropdown value in a div
+4. have 2 inputBoxes, and a dropdown(+,-,*,/) and perform arithmetic operations
+5. create a input box, toggle the type of that input box to (text/password)
+6. create a counter example with 3 controls(increment,decrement,reset)
+7. Have a toggle button and control Dark/Light theme of a page.
+8. Temperature Converter (celcius to fahrenheit)
+
+
+
+How to use SweetAlert	
+=====================
+https://sweetalert2.github.io/#examples
+	
+1. npm i sweetalert2	
+2. import Swal from 'sweetalert2'	
+3. on button click call a function, which has the below code	
+	Swal.fire(	
+	  'Good job!',	
+	  'You clicked the button!',	
+	  'success'	
+	)	
+
+
+
+
 
 
 
