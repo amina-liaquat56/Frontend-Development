@@ -970,7 +970,21 @@ Search
         data={employees}
       />
 
-
+Pagination
+==========
+1. npm install react-paginate  
+2. import ReactPaginate from 'react-paginate';
+3. Add the below code in a component
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+      />
+Note: For complete code plz refer 'react_programs.txt' file
 
 
 
