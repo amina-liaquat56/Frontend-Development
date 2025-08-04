@@ -986,6 +986,34 @@ Pagination
       />
 Note: For complete code plz refer 'react_programs.txt' file
 
+React Events
+============
+-React events are written in camelCase
+	onClick-correct
+	onclick-wrong
+-React event handlers are written inside curly braces
+	onClick={shoot}  instead of onClick="shoot()"
+	<button onClick={shoot}>Take the Shot!</button>   // calls the function on click
+	<button onClick={shoot()}>Take the Shot!</button> // calls the function on load
+-For methods in React,the 'this' keyword should represent the component that owns the method.
+-That is why we should use arrow functions. 
+ With arrow functions, 'this' will always represent the object that defined the arrow function.
+-In class components, the this keyword is not defined by default, 
+ so with regular functions the this keyword represents the object that called the method, which can be the global window object, a HTML button, or whatever.
+-If you must use regular functions instead of arrow functions you have to
+ bind 'this' to the component instance using the bind() method.
+    constructor(props) {
+        super(props);
+        this.f1 = this.f1.bind(this);
+    }
+    state = {
+        counter: 0
+    }
+    f1() {
+        alert("hi");
+        console.log(this)
+        console.log(this.state.counter)
+    }
 
 
 
