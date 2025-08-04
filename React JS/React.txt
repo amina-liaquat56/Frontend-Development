@@ -929,7 +929,46 @@ How to use react-modal
         </Modal>
     </>
 
+How to use react-bootstrap modal
+================================
+1. npm install react-bootstrap bootstrap  
+2. import Modal from 'react-bootstrap/Modal';
+3. const [show, setShow] = useState(false);
+   const handleClose = () => setShow(false);
+   const handleShow = () => setShow(true);
+   
+   <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+    </Modal>
+	<Button onClick={handleShow}>click me</Button>
 
+
+Search
+======
+1. Install react-js-search from npm
+   npm i react-js-search
+2. Import SearchBar in component
+   import SearchBar from 'react-js-search';
+3. use the below HTML
+   <SearchBar
+        onSearchTextChange={(term, filteredData) => {
+          setFilteredEmployees([...filteredData]);
+        }}
+        onSearchButtonClick={onSearchClick}
+        placeHolderText={"Search here..."}
+        data={employees}
+      />
 
 
 
