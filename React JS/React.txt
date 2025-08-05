@@ -1063,6 +1063,17 @@ SyntheticEvent
             </span>
 	</div>
 
+Component Communication
+=======================
+->Parent to Child :  props
+->Child to Parent :  callback and states
+->Between Siblings :  Combine the above 2
+
+
+Child To Parent:	
+1. Define a function in parent which takes the data as a parameter.	
+2. Pass that function as a prop to the child.	
+3. Call the function using this.props.[callback] in the child, pass in the data as the argument.
 
 
 
