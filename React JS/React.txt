@@ -1118,6 +1118,42 @@ React Memo Component
 -Avoids re-rendering a component when its props are unchanged.
 -ex: export default React.memo(MyComponent);
 
+useMemo()
+========
+-The functions called inside component are re-invoked on every state change.
+-If we want the functions should be called only on component load and not on every state changes then for that function, 
+useMemo should be used.
+-useMemo Hook returns a memoized value.
+-The useMemo(()=>{} , []) hook accepts a second parameter to declare dependencies. 
+ The function will only run when its dependencies are changed.
+-The main difference between usememo() and useCallBack() is that 
+ useMemo() returns a memoized value and useCallback() returns a memoized function.
+ex: 
+  // const calculation = expensiveCalculation(count); // function gets called on every state change
+  // const calculation = useMemo(() => expensiveCalculation(count), []); // function gets called on page load
+  const calculation = useMemo(() => expensiveCalculation(count), [count]); // function gets called on count change
+
+
+
+
+useCallBack()
+=============
+-useCallback() Hook returns a memoized callback function.
+-useCallback() Hook only runs when one of its dependencies update.
+-useCallback() should be used to prevent a component from re-rendering unless its props have changed.
+-When a function is passed as a props from parent to child component,child component re-renders even if no props data changes(even though the child is a memo component)
+-the function that gets passed as a props gets a new reference everytime there is a state change in parent component.
+ex:
+ <ToDoDemo todos={todos} addTodo={addTodo} />
+ 
+ const addTodo = () => {
+	setTodos((t) => [...t, "New Todo"]);
+ };
+ -----------------
+ const addTodo = useCallback(() => {
+    setTodos((t) => [...t, "New Todo"]);
+  }, []);
+
 
 
 
