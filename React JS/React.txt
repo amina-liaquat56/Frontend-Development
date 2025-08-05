@@ -1108,6 +1108,15 @@ Component vs PureComponent
 -in Functional components, re-render happens only if the state changes. 
 -Every Functional Component is a Pure-Component.
 
+React Memo Component
+====================
+-Introduced in React v16.6.  This improves performance.
+-React.memo() is a higher-order component/function.
+-React.memo() can be used for both class & function components.
+-React.memo() is used with child components only(the component receiving porps)
+-When a component is wrapped in React.memo(), React renders the component only if the props those are passed to that component changes.
+-Avoids re-rendering a component when its props are unchanged.
+-ex: export default React.memo(MyComponent);
 
 
 
