@@ -1075,6 +1075,39 @@ Child To Parent:
 2. Pass that function as a prop to the child.	
 3. Call the function using this.props.[callback] in the child, pass in the data as the argument.
 
+Assignment
+==========
+1. create 1 EmployeeCRUD component
+2. display list of employees in a table(data comes from an array)
+3. user should be able to delete Employee (ask user confirmation) 
+4. view the details of each employee in a modal (bootstrap Modal)
+5. add a new employee to the table (insert a new record to the array)
+   use SnackBar to display message ('Employ Added Successfully' - message should be maintained in a constant file)
+
+
+
+Assignment
+==========
+Todo CRUD Component with below functionalities
+1. Add Todo : User types a todo and clicks “Add” , add the item to the todo list
+2. Toggle Completion : User checks a checkbox to mark as completed or not completed
+3. Delete Todo : Each todo item should have a delete button to remove it from the list.
+4. Completed Count : Show the number of completed todos (e.g., 3 out of 5 tasks completed)
+ 
+
+
+Component vs PureComponent
+==========================
+-PureComponent is exactly the same as Component except that it handles the 
+ 'shouldComponentUpdate' method for us. 
+-When props or state changes, PureComponent will do a shallow comparison on both props and state.if there is a change in state/props, then only render() will be called. 
+-A normal Component always calls render() when we update the state. even though there is no change in the last state data and current state data.
+-Class components that extend the React.PureComponent class are treated as pure components.
+	Ex: class myComp extends React.PureComponent {
+		}
+-in Functional components, re-render happens only if the state changes. 
+-Every Functional Component is a Pure-Component.
+
 
 
 
