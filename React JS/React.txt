@@ -1155,6 +1155,51 @@ ex:
   }, []);
 
 
+LifeCycle Hooks
+===============
+-Every component in React goes through a lifecycle of events.
+-The three phases are: 
+	1.Mounting - (constructor,getDerivedStateFromProps,render,componentDidMount)
+	2.Updating - (getDerivedStateFromProps,shouldComponentUpdate,render,getSnapshotBeforeUpdate, componentDidUpdate)
+	3.Unmounting - (componentWillUnmount)
+
+
+Mounting: means putting elements into the DOM.
+---------------------------------------------
+1.constructor()
+2.static getDerivedStateFromProps(props,state)
+3.render()
+4.componentDidMount()
+
+Note:- The render() method is required and will always be called, 
+	   the others are optional and will be called if you define them.
+
+
+constructor()
+-----------
+-The constructor() method is called before anything else, when the component is initiated. 
+-It is the natural place to set up the initial state and other initial values.
+-The constructor() method is called with the props, as argument, 
+ and you should always start by calling the 'super(props)' before anything else,
+ Otherwise,this.props will be undefined.
+-This will initiate the parent's constructor method and allows the component to inherit methods from its parent (React.Component).
+-If you neither initialize state nor bind methods for your React component, there is no need to implement a constructor for React component.
+-setState() method should not be called in the constructor(). we will get console error
+ error - Can't call setState on a component that is not yet mounted
+
+
+static getDerivedStateFromProps()
+--------------------------------
+-The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM.
+-This is the natural place to set the state object based on the initial props.
+-It takes (props,state) as argument, and returns an object with changes to the state.
+-only fires when the parent causes a re-render and not as a result of a local setState.
+
+
+render()
+-------
+-The render() method is required, and is the method that actual outputs HTML to the DOM.
+-it gets re-invoked when state/props data changes.
 
 
 
