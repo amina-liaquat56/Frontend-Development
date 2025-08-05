@@ -1201,6 +1201,30 @@ render()
 -The render() method is required, and is the method that actual outputs HTML to the DOM.
 -it gets re-invoked when state/props data changes.
 
+componentDidMount()
+------------------
+-The componentDidMount() method is called after the component is rendered.
+-This is a good place to initiate the network request.
+-if we are going to fetch any data from an API then API call should be placed in this lifecycle method,and then we get the response, we can call the setState() method and render the element with updated data.
+-good place for DOM manipulation.
+
+
+
+Updating
+=========
+1.static getDerivedStateFromProps(props,state)
+2.shouldComponentUpdate()
+3.render()
+4.getSnapshotBeforeUpdate(prevProps, prevState)
+5.componentDidUpdate()
+
+
+getDerivedStateFromProps()
+-----------------------
+-while updating state/props getDerivedStateFromProps() method is called. 
+-This is the first method that is called when a component gets updated.
+-This is still the natural place to set the state object based on the initial props.
+
 
 
 
