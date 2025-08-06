@@ -1276,6 +1276,19 @@ useEffect()
 -If 2nd arguement is present, effect will only run if the values in the list change.
 -we can have many useEffects() in a component to track changes for diff variables.
 
+How to use componentWillUnmount in Functional Components
+========================================================
+import React, { useEffect } from 'react';
+const ComponentExample => () => {
+    useEffect(() => {
+        // Anything in here is fired on component mount.
+        return () => {
+            // Anything in here is fired on component unmount.
+        }
+    }, [])
+}
+
+Note: When the state is updated, the component gets re-rendered, Hence the component gets unmounted and gets rendered again.
 
 
 
