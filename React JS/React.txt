@@ -1265,6 +1265,16 @@ componentWillUnmount()
  or cleaning up any DOM elements created in componentDidMount.
 -clearTimeout, ClearInterval , Unsubscribe, detachEventHandlers
 
+useEffect()
+----------
+-useEffect serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount.
+-useEffect() takes a callBack Function as 1st argument and Dependency arrray as 2nd argument.
+ ex: useEffect(()=>{} , []);
+-array contains dependencies for useEffect,variables on which useEffect depends on to re-run.
+-If 2nd argument is not present, effect runs everytime there is a state change.
+-When 2nd argument is there and the array is empty, the effect runs only once.(on component load)
+-If 2nd arguement is present, effect will only run if the values in the list change.
+-we can have many useEffects() in a component to track changes for diff variables.
 
 
 
