@@ -1226,6 +1226,23 @@ getDerivedStateFromProps()
 -This is still the natural place to set the state object based on the initial props.
 
 
+shouldComponentUpdate()
+----------------------
+-In the shouldComponentUpdate() method a boolean value should be returned that specifies whether React should continue with the rendering or not.
+-The default value is true.
+-shouldComponentUpdate() lifecycle shouldn't be added if the class is extending React.PureComponent.
+
+
+getSnapshotBeforeUpdate(prevProps, prevState)
+------------------------
+-In the getSnapshotBeforeUpdate(prevProps, prevState) method we have access to the props and state before the update,meaning that even after the update, we can check what the values were before the update.
+
+
+example:
+-When the component is mounting it is rendered with the favorite color "red".
+-When the component has been mounted, a timer changes the state, and after one second,the favorite color becomes "yellow".
+-This action triggers the update phase, and since this component has a getSnapshotBeforeUpdate() method,this method is executed, and writes a message to the empty DIV1 element.
+
 
 
 
