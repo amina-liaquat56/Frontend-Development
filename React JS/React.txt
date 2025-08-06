@@ -1243,6 +1243,27 @@ example:
 -When the component has been mounted, a timer changes the state, and after one second,the favorite color becomes "yellow".
 -This action triggers the update phase, and since this component has a getSnapshotBeforeUpdate() method,this method is executed, and writes a message to the empty DIV1 element.
 
+componentDidUpdate()
+-------------------
+-The componentDidUpdate() method is called after the component is updated in the DOM.
+-componentDidUpdate() is invoked immediately after the state is updated.
+-This method is not called for the initial render,componentDidMount() will be called for the initial render. 
+-it gets called only when state/props gets updated.
+
+
+
+
+Unmounting - Removing the component from DOM
+==========
+-The next phase in the lifecycle is when a component is removed from the DOM,or unmounting.
+-React has only one built-in method that gets called when a component is unmounted.
+
+componentWillUnmount()
+---------------------
+-Called immediately before a component is destroyed. 
+-Perform any necessary cleanup in this method, such as cancel network requests, 
+ or cleaning up any DOM elements created in componentDidMount.
+-clearTimeout, ClearInterval , Unsubscribe, detachEventHandlers
 
 
 
