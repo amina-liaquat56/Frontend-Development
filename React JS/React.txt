@@ -1319,6 +1319,18 @@ Refs (Template Reference Variable)
 
 Q. How to display previous State & Current State data in functional Component using ref.
 
+Forms
+=====
+-React uses forms to allow users to interact with the web page.(Collect User Data)
+-control the values of more than one input field by adding a name attribute to each element.
+-get the field value by using the 'event.target.value', 
+ get the field name by using 'event.target.name'
+-control the submit action by adding an event handler with onSubmit attribute.
+  <form onSubmit={this.submitHandler}> 
+    <button>submit</button>
+  </form>
+-use event.preventDefault() to prevent the form from actually being submitted.(to avoid page refresh)
+
 
 
 
