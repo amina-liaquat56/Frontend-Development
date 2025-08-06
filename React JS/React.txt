@@ -1290,6 +1290,13 @@ const ComponentExample => () => {
 
 Note: When the state is updated, the component gets re-rendered, Hence the component gets unmounted and gets rendered again.
 
+useLayoutEffect
+===============
+-useLayoutEffect is a version of useEffect that fires before the browser repaints the screen.
+-This runs synchronously immediately after React has performed all DOM mutations.
+-useLayoutEffect(callBack, dependencies?)
+-useLayoutEffect: If you need to mutate the DOM inside the effect()
+
 
 
 
