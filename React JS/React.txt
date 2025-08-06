@@ -1297,6 +1297,27 @@ useLayoutEffect
 -useLayoutEffect(callBack, dependencies?)
 -useLayoutEffect: If you need to mutate the DOM inside the effect()
 
+Refs (Template Reference Variable)
+==================================
+-reference variables: help  to use data from one part of a template in another part of the template.
+-with reference variables, we can perform tasks such as respond to user input or
+ fine tune your application's forms.
+-Refs provide a way to access DOM nodes or React elements.
+-used to modify child comp (OR) DOM.
+-Managing focus, text selection , animations.
+-ex: this.myRef1 = React.createRef();  (class component)
+     const myRef1 = useRef();          (function component)
+     
+
+-React supports another way to set refs called “callback refs”, 
+ which gives more fine-grain control over normal refs when refs are set and unset.
+ ex: <input ref={x => inputRef1=x} />
+     alert(inputRef1.value)
+	 
+-'Ref forwarding' is a feature that lets some components take a ref they receive,and pass/forward it further down to a child.
+
+
+Q. How to display previous State & Current State data in functional Component using ref.
 
 
 
