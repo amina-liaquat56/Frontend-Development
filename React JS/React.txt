@@ -1331,6 +1331,25 @@ Forms
   </form>
 -use event.preventDefault() to prevent the form from actually being submitted.(to avoid page refresh)
 
+-A form can be validated on change or while submitting the form.
+-The textarea element in React is slightly different from HTML Syntax.
+-In HTML the value of a textarea was the text between the start tag <textarea> and the end tag </textarea>,
+ in React the value of a textarea is placed in a value attribute:
+   <textarea value={this.state.description} />   correct
+   <textarea>{this.state.description}<textarea>  wrong
+-A drop down list, or a select box, in React is also a bit different from HTML.
+-in HTML, the selected value in the drop down list was defined with the selected attribute:
+	 <select value={this.state.mycar}>
+        <option value="Ford">Ford</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Fiat">Fiat</option>
+      </select>   //correct
+	  
+	<select>
+	  <option value="Ford">Ford</option>
+	  <option value="Volvo" selected>Volvo</option>
+	  <option value="Fiat">Fiat</option>
+	</select> //wrong
 
 
 
