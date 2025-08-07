@@ -1428,6 +1428,13 @@ http status codes
 4xx Client Error   (400-Bad Request,401-Unauthorized,403-Forbidden,404-Not Found)
 5xx Server Error   (500-Internal Server Error,502-Bad Gateway,503-Service Unavailable)
 
+POSTMAN
+=======
+-Application, used to Test REST APIs. (chrome://apps/)
+-Send requests, get responses, and easily debug REST APIs.
+-Browser Extension / Application
+ https://www.postman.com/downloads/
+-Thunder Client(VSCode Extension) is an alternate to postman
 
 
 
