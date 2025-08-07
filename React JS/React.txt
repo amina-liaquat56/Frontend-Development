@@ -1371,6 +1371,18 @@ dynamic inputs								no					yes
 -Let React to specify the initial value, but leave subsequent updates uncontrolled.
 -To handle this case, you can specify a 'defaultValue' attribute instead of value.
 
+-Controlled form components are defined with a value property. 
+-value of controlled input is managed by React, 
+-With a controlled component, the input’s value is always driven by the React state.
+-component state and the input value is in sync at all the times.
+ <input onChange={this.onChange} value={this.state.name} />
+ 
+
+NPM Libraries for Form Handling
+===============================
+1. https://www.npmjs.com/package/react-hook-form
+2. https://www.npmjs.com/package/formik
+3. https://www.npmjs.com/package/yup
 
 
 
