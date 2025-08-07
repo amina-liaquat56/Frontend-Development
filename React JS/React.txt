@@ -1362,6 +1362,15 @@ Conditionally disabling submit button		no					yes
 Enforcing input format						no					yes
 dynamic inputs								no					yes
 
+-Uncontrolled inputs are like traditional HTML form inputs.
+-Form data is handled by the DOM itself.
+-They remember what we typed. we can then get their value using a ref.
+-To write an uncontrolled component, instead of writing an event handler for every state update, you can use a ref to get form values from the DOM.
+-you have to ‘pull’ the value from the field when you need it.(ex:-form submit)
+-there is no updating of any state when you change the input-box value.
+-Let React to specify the initial value, but leave subsequent updates uncontrolled.
+-To handle this case, you can specify a 'defaultValue' attribute instead of value.
+
 
 
 
