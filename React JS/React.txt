@@ -1384,6 +1384,35 @@ NPM Libraries for Form Handling
 2. https://www.npmjs.com/package/formik
 3. https://www.npmjs.com/package/yup
 
+HTTP Methods
+============
+GET - Retrieve a resource/Retrieve data from DB
+	  search
+	  
+POST - to send data to server  ( sign up ) 
+       (create a resource/create a new record in DB)
+	   to fetch data securly    (send params in body not in URL)
+
+PUT - update data/create or replace a resource  
+	  update user's profile information 
+	  
+PATCH - update/modify a particular resource(partial update)
+        update user password
+
+DELETE - Remove a resource/delete a record from DB 
+		 Delete naukri account
+		 
+
+PUT vs POST
+-----------
+-POST for CREATE operation, PUT is for create & update.
+-PUT is idempotent, where POST is non-idempotent.
+-Idempotence(producing the same result even if the same request is made multiple times)
+-(PUT)if you retry a request N times, that should be equivalent to single request modification.
+-(POST)if you retry the request N times, you will end up having N resources with N different URIs created on server
+-Use PUT when you want to modify a singular resource which is already a part of resources collection.
+-Use POST when you want to add a child resource under resources collection.
+
 
 
 
