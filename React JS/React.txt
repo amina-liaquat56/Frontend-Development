@@ -1351,6 +1351,16 @@ Forms
 	  <option value="Fiat">Fiat</option>
 	</select> //wrong
 
+Feature									Uncontrolled		Controlled	
+-----------------------------------------------------------------------
+One-time value retrieval 
+(e.g. on submit)							yes					yes
+Validating on submit						yes					yes
+Default Value								yes                 yes
+Field-level Validation						no					yes
+Conditionally disabling submit button		no					yes
+Enforcing input format						no					yes
+dynamic inputs								no					yes
 
 
 
