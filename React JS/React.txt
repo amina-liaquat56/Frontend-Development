@@ -1520,6 +1520,27 @@ HTTP with axios
 -has the ability to intercept HTTP requests.	Fetch, by default, doesn’t 
 -has built-in support for download progress.	Fetch does not support upload progress.
 
+Create an Axios Instance
+========================
+1. Create a separate file named api.js(can be anything) and add the below code
+	import axios from 'axios';
+	const client = axios.create({
+	  baseURL: `http://jsonplaceholder.typicode.com/`
+	});
+	export default client;
+	
+2. Once the default instance is set up, it can then be used anywhere
+   import client from 'api.js'
+   client.get('/users')
+
+
+
+Making multiple requests with axios  
+===================================
+const promise1 = axios.get('https://api.github.com/users/defunkt')
+const promise2 = axios.get('https://api.github.com/users/evanphx')
+const [response1, response2] = await axios.all([promise1, promise2]);
+
 
 
 
