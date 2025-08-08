@@ -1494,6 +1494,32 @@ Async Await
     setProducts(productsJSON);
   };
 
+HTTP with axios
+===============
+1. install axios
+   npm i axios
+2. import axios to component
+   import axios from 'axios';   
+3. Use the http methods
+    const fetchUsers = async () => {
+		const url = "https://jsonplaceholder.typicode.com/users";
+		const response = await axios.get(url);
+		setUsers(response.data);
+    };
+  
+
+
+		Axios												fetch()
+===========================================================================
+-built-in XSRF protection.						-Fetch does not.
+-uses the data property.						-Fetch uses the body property.
+-data contains the object.						-Fetch’s body has to be stringified.
+-request is ok when status is 200 and statusText is ‘OK’.	Fetch request is ok when response object contains the ok property.
+-performs automatic transforms of JSON data.		Fetch is a two-step process when handling JSON data- first, to make the actual request; second, to call the .json() method on the response.
+-allows cancelling request and request timeout.	Fetch does not.
+-has the ability to intercept HTTP requests.	Fetch, by default, doesn’t 
+-has built-in support for download progress.	Fetch does not support upload progress.
+
 
 
 
