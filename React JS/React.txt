@@ -1436,6 +1436,18 @@ POSTMAN
  https://www.postman.com/downloads/
 -Thunder Client(VSCode Extension) is an alternate to postman
 
+Fake Online REST API for Testing 
+--------------------------------
+1. https://jsonplaceholder.typicode.com/
+2. https://reqres.in/
+3. https://fakestoreapi.com/products
+4. https://api.github.com/users/google
+5. https://dummyjson.com/products
+6. https://dummy.restapiexample.com/
+7. https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies
+8. https://api.publicapis.org/entries
+
+
 
 
 
