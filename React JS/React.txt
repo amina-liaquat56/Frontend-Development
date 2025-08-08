@@ -1448,6 +1448,25 @@ Fake Online REST API for Testing
 8. https://api.publicapis.org/entries
 
 
+Create REST API with json-server
+--------------------------------
+https://medium.com/@devmrin/create-a-rest-api-json-server-in-less-than-1-minute-acf286600f03
+
+1.  Install json-server (not necessarily in a react project)
+	npm install -g json-server
+2. create a json file  and add some data (not necessarily in a project)
+    db.json (filename can be anything.json)
+3. start json server
+   json-server --watch db.json --port=4000
+   
+   
+http://localhost:3000/employees   
+GET    /employees
+GET    /employees/{id}
+POST   /employees
+PUT    /employees/{id}
+PATCH  /employees/{id}
+DELETE /employees/{id}
 
 
 
