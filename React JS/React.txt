@@ -1583,6 +1583,30 @@ axios.interceptors.response.use(
   }
 );
 
+Run interceptor only for few APIs
+---------------------------------
+axios.interceptors.request.use((req) => {
+    console.log(req);
+    if (req.url.includes("users")) {
+      req.headers.authorization = "my secret token";
+    }
+    return req;
+ });
+
+
+remove an interceptor
+---------------------
+const myInterceptor = axios.interceptors.request.use(function () {/*...*/});
+axios.interceptors.request.eject(myInterceptor);
+
+
+
+add interceptors to a custom instance of axios
+-----------------------------------------------
+const client = axios.create();
+client.interceptors.request.use((req) => { 
+	// Logic
+});
 
 
 
