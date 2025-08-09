@@ -1627,6 +1627,21 @@ use cases:
 
 https://www.codingame.com/playgrounds/8595/reactjs-higher-order-components-tutorial
 
+Routing
+=======
+-Single Page Applications(SPAs) are web applications that load a single HTML page and 
+ dynamically update that page as user interacts with the application.
+-Complete page Re-load doesn't happen. only a portion of a page gets loaded.
+-Routing in a Single Page Application is the way to introduce some features for navigating the application  through links.
+-Every time a link is clicked or browser URL changes, React Router makes sure 
+ our application loads component accordingly.
+-The browser should change the URL when we navigate to a different screen.
+-The browser back and forward button should work as expected.
+-Routing links together your application navigation with the navigation features offered by the browser: the address bar and the navigation buttons.
+-React Router offers a way to write your code so that it will show certain components of your app  only if the route matches what you define.
+
+
+
 
 
 
