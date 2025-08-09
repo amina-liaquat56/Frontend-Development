@@ -1608,6 +1608,25 @@ client.interceptors.request.use((req) => {
 	// Logic
 });
 
+React Higher Order Components (HOCs)
+=============================
+-A higher-order component (HOC) is a technique in React for re-using component logic.
+-To Share Common Functionalities accross components without repeating the code.
+-Higher order Component takes one or more components as arguments, and return a new upgraded component.
+  newComponent = higherOrderComponent( originalComponent )
+-Higher order components are JavaScript functions used for adding additional functionalities to the existing component.
+-These functions are pure, which means they are receiving data and returning values according to that data. 
+-Authentication,Logging,Styling and Theming
+-the effect written inside HOC runs only when props change, if a component(Counter) updates its own state(count) without any changes in props, the effect won't run.
+
+use cases:
+-Infinite scroll in three different views, all having different data.
+-Components using data from third party subscription.
+-Components that need logged in user data.
+-Showing multiple lists(e.g. Users, Locations) with search feature.
+
+https://www.codingame.com/playgrounds/8595/reactjs-higher-order-components-tutorial
+
 
 
 
