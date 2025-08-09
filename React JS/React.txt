@@ -1640,6 +1640,25 @@ Routing
 -Routing links together your application navigation with the navigation features offered by the browser: the address bar and the navigation buttons.
 -React Router offers a way to write your code so that it will show certain components of your app  only if the route matches what you define.
 
+Types of routes:
+================
+React Router provides two different kind of routes:
+1. BrowserRouter (builds classic URLs)
+2. HashRouter (builds URLs with the hash)
+
+https://application.com/dashboard     // BrowserRouter  ( IE>9 (OR) any other browser )
+https://application.com/#/dashboard   // HashRouter (IE<9)
+
+-Which routes to use is mainly decided by the browsers we want to support. 
+-BrowserRouter uses the History API, which is relatively recent, and not supported in IE9 and below. 
+-If we don’t have to worry about older browsers, BrowserRouter is the recommended one to use.
+
+
+-Below are the 3 components used the most while working with React Router are:
+	1. BrowserRouter, usually aliased as Router (wraps all your Route components)
+	2. Link		(used to generate links to your routes)
+	3. Route    (showing or hiding the components they contain)
+
 
 
 
