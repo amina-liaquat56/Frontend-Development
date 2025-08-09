@@ -1541,6 +1541,27 @@ const promise1 = axios.get('https://api.github.com/users/defunkt')
 const promise2 = axios.get('https://api.github.com/users/evanphx')
 const [response1, response2] = await axios.all([promise1, promise2]);
 
+Http Interceptors
+=================
+-Interceptor is a feature that allows an application to intercept/modify requests or  responses before they are handled by  .then() or the .catch()
+ 
+ httpRequest ----> Interceptor ----> ModifiedRequest ----> Server
+ ModifiedResponse<---- Interceptor <---- httpResponse <---- Server
+
+Request interceptor use cases:
+-Assume you want to check before making a request if your credentials are valid. 
+ So, instead of actually making an API call, you can check at the interceptor level that your credentials are valid.
+-Assume you need to attach a token to every request made, instead of duplicating 
+ the token addition logic at every Axios call, you can make an interceptor that 
+ attaches a token on every request that is made.
+
+export function myInterceptor() {
+  axios.interceptors.request.use((req) => {
+    req.headers.authorization = "my secret token";
+    return req;
+  });
+}
+-call the above function in app.js
 
 
 
