@@ -1810,4 +1810,23 @@ Protected Routes
 -check a condition to confirm if user is authenticated or not. 
 -if the value is true, render the component, else, Redirect route to /signin page.
 
+Replace
+=======
+-replaces the current location instead of pushing a new one onto the browser history stack.
+-Without replace : Adds a new entry to the browser history (Back button will go back)
+-With replace : Replaces current URL (Back button won’t return to the previous URL)
+-HTML Code : <Navigate to="/home" replace />
+-Javascript code: navigate("/home", { replace: true })
+-After successful Login,we use the above code to go to home page
+ 'replace' attribute prevents users from pressing Back and returning to the login page after successful login.
+-When to Use replace:
+	1. After login/logout to prevent users from going back to the login page.
+	2. For redirects where you don’t want the previous page in history.
+	3. For reset navigation flows.
 
+
+Exact
+=====
+-The exact param disables the partial matching for a route and makes sure that it only  returns the route if the path is an EXACT match to the current url.
+-If you're using React Router v6+, don’t use exact—it’s no longer needed
+-In react-router-dom v6, all routes are matched exactly by default.
