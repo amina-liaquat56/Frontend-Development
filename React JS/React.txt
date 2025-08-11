@@ -1788,6 +1788,26 @@ Nested Routing
         <Link to="new">New</Link>
       </div>
       <Outlet />
-   
+
+Index Route
+===========
+-A child route with no path that renders in the parent's outlet at the parent's URL.
+-Child Path would remain same like parent route.
+	<Route path="/products" element={<Products />}>
+		<Route index element={<FeaturedProducts />} />
+        <Route path="featured" element={<FeaturedProducts />} />
+        <Route path="new" element={<NewProducts/>}/>
+    </Route>
+	<Outlet />
+	
+
+Protected Routes
+================
+-Protected Routes are routes that can only be accessed if a condition is met(usually, if user is properly authenticated). 
+-It returns a Route that either renders a component or redirects a user to another route based on a set condition.
+
+-create a component that accepts another component and other route details as props.
+-check a condition to confirm if user is authenticated or not. 
+-if the value is true, render the component, else, Redirect route to /signin page.
 
 
