@@ -1830,3 +1830,20 @@ Exact
 -The exact param disables the partial matching for a route and makes sure that it only  returns the route if the path is an EXACT match to the current url.
 -If you're using React Router v6+, don’t use exact—it’s no longer needed
 -In react-router-dom v6, all routes are matched exactly by default.
+
+
+Code Splitting/Lazy Loading
+===========================
+-Code-Splitting is a feature supported by bundlers like Webpack which can create 
+ multiple bundles that can be dynamically loaded at runtime.
+-The best way to introduce code-splitting into your app is through the dynamic import()
+
+-Lazy loading helps to load a module/component whenever it is required(on-demand).
+-React.lazy() allows  to render a dynamic import as a regular component.
+	before - import OtherComponent from './OtherComponent';  
+    after- const OtherComponent = React.lazy(() => import('./OtherComponent')); 
+-lazy component should then be rendered inside a Suspense component, which allows us to show some fallback content (such as a loading indicator) while we’re waiting for the lazy component to load.
+ <Suspense fallback={<div>Loading...</div>}>
+     <OtherComponent />
+ </Suspense>
+ 
