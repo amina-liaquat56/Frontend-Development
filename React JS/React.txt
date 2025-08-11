@@ -1745,6 +1745,49 @@ Path Params
 3. collect the params data and display
    const { id } = useParams();
    <h1>This is the details of product - {id}</h1>
+
+Query params
+------------
+1. configure the route
+   <Route path="/productdetails" element={<ProductDetails />} />
+   
+2. create a link & navigation logic
+  const navigate = useNavigate();
+  const navigateHandler = (title, price) => {
+    navigate({
+      pathname: "/productdetails",
+      search: `?${createSearchParams({ title, price })}`,
+    });
+  };
+   <button className="btn btn-secondary" onClick={() => {
+              navigateHandler(title, price);
+            }}>query param</button>
+
+3. collect params data and display
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const currentParams = Object.fromEntries([...searchParams]);
+    console.log(currentParams); // get new values onchange
+	console.log(searchParams.get("title"), searchParams.get("price"));
+  }, [searchParams]);
+  
+  
+  
+Nested Routing
+==============
+-nested routing is used so that a parent component has control over its child component 
+ at the route level.
+-Route: Products (nested Routes: featured Products, New products)
+	<Route path="/products" element={<Products />}>
+        <Route path="featured" element={<FeaturedProducts />} />
+        <Route path="new" element={<NewProducts/>}/>
+    </Route>
+-add a nav in Parent(products) component, and a outlet	
+     <div className="courses-nav">
+        <Link to="featured">featured</Link>
+        <Link to="new">New</Link>
+      </div>
+      <Outlet />
    
 
 
