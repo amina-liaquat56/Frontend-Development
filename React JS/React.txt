@@ -1846,4 +1846,20 @@ Code Splitting/Lazy Loading
  <Suspense fallback={<div>Loading...</div>}>
      <OtherComponent />
  </Suspense>
- 
+
+ Error Boundaries
+================
+-A JavaScript error in a part of the UI shouldn’t break the whole application. 
+ To solve this problem, React 16 introduced a new concept  “error boundary”
+-Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
+-Error boundaries do not catch errors for below things:
+	Event handlers 
+	Asynchronous code (e.g. setTimeout or requestAnimationFrame callbacks)
+	Server side rendering
+	Errors thrown in the error boundary itself (rather than its children)
+-Error Boundary is supported only in class components , not in functional components.
+-A class component becomes an error boundary if it defines componentDidCatch().
+-Error boundaries work like a JavaScript catch {} block, but for components.
+-Error boundaries only catch errors in the components below them in the tree. 
+ An error boundary can’t catch an error within itself.
+-We can use static getDerivedStateFromError() to render a fallback UI when an error has been thrown, and can use componentDidCatch() to log error information.
