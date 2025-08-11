@@ -1686,6 +1686,19 @@ Steps for Routing
       <Link to="/shop">Shop Now </Link>
     </div>
 
+Link vs NavLink
+===============
+-When we use <Link> there isn't any active class on selected element.
+-with <NavLink> the selected element is highlighted because this element adds an active class.
+ <NavLink to='home' className='nav-link'>Home</NavLink>
+-add below css: 
+	nav a.active{text-decoration:none;font-weight:bolder;background-color: aqua}
+
+
+
+Navigate from one Route to another Route
+=========================================
+<Link to="/products">go to Product</Link>
 
 
 
