@@ -1659,6 +1659,32 @@ https://application.com/#/dashboard   // HashRouter (IE<9)
 	2. Link		(used to generate links to your routes)
 	3. Route    (showing or hiding the components they contain)
 
+Steps for Routing
+=================
+1. Install  React Router DOM
+   npm install react-router-dom   
+2. Create Components
+   create components like - (Home,About,Contact,NotFound)   
+3. set up the application to work with React Router. (index.js)
+   import { BrowserRouter } from 'react-router-dom';	
+   <BrowserRouter>
+        <App />
+   </BrowserRouter>	
+4. add the <Routes> element (ensures that only one component is rendered at a time)
+   and add <Route> to create the link between components    (Body.js)
+    <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/aboutus" element={<AboutUs />} />
+        <Route exact path="/products" element={<Products />} />
+        <Route path="*" element={<NotFound />} /> (No Match Route)
+    </Routes>	
+5. Add a Link for each component and use to="URL" to link them.
+   <div>
+      <Link to="/">Home </Link>
+      <Link to="/about">About Us </Link>
+      <Link to="/shop">Shop Now </Link>
+    </div>
 
 
 
