@@ -1700,6 +1700,51 @@ Navigate from one Route to another Route
 =========================================
 <Link to="/products">go to Product</Link>
 
+Navigating Programatically
+========================== 
+import React from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+export default function AboutUs() {
+  const navigate = useNavigate();
+  const func1 = function () {
+    alert("do something");// logic
+    navigate('/products');
+  };
+  return (
+    <>
+      <h1>this is about us component</h1>
+      <Link to="/products">Take me to products page</Link>
+      <button onClick={func1}>Take me To product</button>
+    </>
+  );
+}
 
+
+
+Navigate to previous/next route
+===============================
+const navigate = useNavigate();
+<button onClick={()=>navigate(-1)}>Go Back</button>
+<button onClick={()=>navigate(1)}>Go Next</button>
+
+
+
+Route Params
+============
+1. Path params    (productdetails/101)
+2. Query Params   (search?name=sachin&age=25)
+
+
+Path Params
+-----------
+1. configure the route
+   <Route path="/productdetails/:id" element={<ProductDetails />} />
+2. create a link to that route (ProductList - for Every Product)
+   <Link to={`/productdetails/${id}`}> View Details</Link>
+3. collect the params data and display
+   const { id } = useParams();
+   <h1>This is the details of product - {id}</h1>
+   
 
 
