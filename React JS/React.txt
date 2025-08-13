@@ -2014,6 +2014,49 @@ ESLint
    npx eslint --init
 3. eslint .
 
+Environment Variables
+=====================
+-Environment variables allow to define values on a system-wide level. 
+-Avoid the hassle of where to put them in code. 
+-It keeps sensitive data separated from code.
+-There is a built-in environment variable called NODE_ENV,we can read it from process.env.NODE_ENV
+  npm start     NODE_ENV   development
+  npm test      NODE_ENV   test
+  npm run build NODE_ENV   production
+-follow the below steps to create custom environment variables
+ 1. create .env file in project
+ 2. Add variables in that file
+    Note:create custom environment variables beginning with REACT_APP_
+ 3. use environemnt variable in any component
+    console.log(process.env.REACT_APP_MY_NAME);
+	<h1>Your name is: {process.env.REACT_APP_MY_NAME}</h1>
+
+https://create-react-app.dev/docs/adding-custom-environment-variables/
+
+
+
+
+Context API
+===========
+-React context API helps to avoid the problem of props drilling & share global state easily.
+-Context provides a way to pass data through the component tree without passing props through intermediate components.
+-Context is primarily used when some data needs to be accessible by many components at different nesting levels.
+-useful and ideal for small applications where state changes are minimal.
+-ex: current authenticated user, theme, or preferred language.
+
+-There are 3 main steps to use the React context:
+1. Create context using the React.createContext({}) method.
+	export const MyContext = React.createContext(defaultValue);
+	
+2. Create a Provider that supplies the data to components
+	<MyContext.Provider value={/* some value */}>
+	    <ComponentX />
+	<MyContext.Provider>
+	   
+3. Consume the context value. 
+	const myContextObj = useContext(myContext);
+	<div>Context Data is: {myContextObj}</div>
+
 
 
 
