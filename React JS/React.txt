@@ -1908,6 +1908,48 @@ import { createPortal } from 'react-dom';
   )}
 </div>
 
+Build and Deploy React App
+==========================
+-Building an application means creating identifiable software assembly from 
+ source code which someone can use.
+-Deploying an application refers to making the application accessible to 
+ the world through internet.
+-"npm run build" creates a build directory with a production build of our app. 
+
+  https://cra.link/deployment
+
+
+Deploy in a Local Server
+========================
+-Install a server and deploy our project
+ 1. install a server
+	npm i -g serve 
+ 2. go to project(build) folder, open command prompt and run the below command
+    'serve'  or  'serve -l 7000'
+
+
+Generated Files:
+	main.[hash].js  -  	This is our application code
+    [number].[hash].chunk.js  -  vendor code
+	runtime-main.[hash].js  -   webpack runtime logic which is used to load and run your application
+
+
+Deploy Application in Server
+============================
+-AWS
+-Azure
+-Firebase
+-GithubPages
+-Netlify
+-Heroku
+-Vercel
+
+
+Deploy React in GitHub
+======================
+https://create-react-app.dev/docs/deployment/#github-pages	
+	
+
 
 
 
