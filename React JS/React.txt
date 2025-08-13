@@ -2057,6 +2057,12 @@ Context API
 	const myContextObj = useContext(myContext);
 	<div>Context Data is: {myContextObj}</div>
 
+Read Context data in Class Component
+---------------------------------------
+<MyContext.Consumer>
+	{value => /* render something based on the context value */}
+</MyContext.Consumer>
+
 
 
 
