@@ -1888,3 +1888,48 @@ Pre-requisites:
 <Profiler id="counterExample" onRender={console.log}>
     <StateDemo2 />
 </Profiler>
+
+React Portals
+=============
+-Portals provide a way to render components outside the main DOM tree.
+-Normally, React Components render inside #root DOM Node. ex: <div id="root"></div>
+-With Portals, we can render components outside of it(#root) , but still react capabilities can be used (props,state,context etc)
+-Poratls can be used for Modals, Tooltips, Dropdowns, Toasts/Notifications
+
+-createPortal() 
+ createPortal(children, domNode, key?)
+ 
+import { createPortal } from 'react-dom';
+<div>
+  <p>This child is placed in the parent div.</p>
+  {createPortal(
+    <p>This child is placed in the document body.</p>,
+    document.body
+  )}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
