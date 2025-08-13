@@ -1975,6 +1975,46 @@ package.json vs package-lock.json
 -in package.json (~) tells go up to hot-fixes 1.4.X if 1.4.1 is installed
  in package.json (^) checks if there is a newer version under 1.x.x if 1.4.1 is installed in package-lock.json - there is neither ~ nor 
 
+Dependencies VS Dev-Dependencies
+================================
+- if we need any libraries only at the time of development but not in production, those libraries should be added to DevDependencies.
+  (karma,jasmine,tslint,eslint,cli,jest)
+  ex: npm i --save-dev eslint
+  
+- if we need a library in both development and production environment, then those libraries should be part of dependencies.
+  (bootstrap,sweetalert,react-modal)
+   ex: npm i bootstrap
+
+
+
+Available Scripts
+=================
+-package.json has a list of scripts
+-npm start : Runs the app in the development mode. 
+			 Open http://localhost:3000 to view it in the browser.
+			 The page will reload if you make changes in files.
+-npm test : Launches the test runner in the interactive watch mode. 
+			See the section about running tests for more information.
+-npm run build: Builds the app for production to the build folder. 
+				It correctly bundles React in production mode and optimizes 
+				the build for the best performance.
+-npm run eject: If you aren’t satisfied with the build tool and configuration choices, 
+				you can eject at any time. This command will remove the single build 
+				dependency from your project.
+
+
+
+ESLint
+======
+-ESLint is a static code analysis tool for identifying problematic patterns found in JavaScript code.
+
+1. npm i eslint -g
+2. npm init @eslint/config   
+         (OR) 
+   npx eslint --init
+3. eslint .
+
+
 
 
 
