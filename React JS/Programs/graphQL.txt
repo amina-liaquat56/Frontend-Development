@@ -1,0 +1,28 @@
+1. install apollo-client and graphQL
+   npm install @apollo/client graphql
+   
+2. Initialize ApolloClient (index.js)
+    import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';	
+    const client = new ApolloClient({
+	  uri: 'http://localhost:5000/',
+	  cache: new InMemoryCache()
+	});
+
+3. Connect your Apollo-client to React / Set Up ApolloProvider
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>
+  
+4. Fetch data with useQuery
+   import { gql, useQuery } from '@apollo/client';
+   
+   const GET_COMMENTS_QUERY = gql`
+    query comments {
+      comments {
+        id
+        name
+		email
+      }
+    }
+  `;
+   const { loading, error, data } = useQuery(GET_COMMENTS_QUERY);
