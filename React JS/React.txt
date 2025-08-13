@@ -2063,6 +2063,19 @@ Read Context data in Class Component
 	{value => /* render something based on the context value */}
 </MyContext.Consumer>
 
+Redux
+=====
+-Redux is a state management library.
+-Redux stores the state of our application.
+-With Redux the state is maintained outside the React component,not in a particular component.
+-Redux 1.0 August 2015
+-React-Redux is the library that provides binding to use React and Redux together in an application.
+-In a typical Redux app there will be a single store & Root-reducer.
+-As Your app grows, you split the Root Reducer in to smaller reducers 
+ independently operating on the different parts of the state tree.
+
+
+View/UI-----> Action --> Reducer --> Store/State --> View
 
 
 
