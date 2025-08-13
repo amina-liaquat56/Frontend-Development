@@ -1,0 +1,22 @@
+import React, { useState, useEffect, useRef } from 'react';
+const LoggerHOC = (InputComponent) => {
+    const EnhancedComponent = (props) => {
+		const isFirstRender = useRef(true);
+        useEffect(() => {
+            console.log(`${InputComponent.name} Mounted`);
+            return () => {
+                console.log(`${InputComponent.name} UnMounted`);
+            }
+        }, []);
+        useEffect(() => { // To Make sure this effect gets called only on update not on mount
+            if (isFirstRender.current) {
+                isFirstRender.current = false;
+            } else {
+                console.log(`${InputComponent.name} Updated`);
+            };
+        });
+        return <InputComponent {...props} />
+    }
+    return EnhancedComponent;
+}
+export default LoggerHOC;
