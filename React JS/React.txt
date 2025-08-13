@@ -1863,3 +1863,28 @@ Code Splitting/Lazy Loading
 -Error boundaries only catch errors in the components below them in the tree. 
  An error boundary can’t catch an error within itself.
 -We can use static getDerivedStateFromError() to render a fallback UI when an error has been thrown, and can use componentDidCatch() to log error information.
+
+React Profiler
+==============
+-Profiler measures how often a React application renders and what the “cost” of rendering is.
+-A Profiler can be added anywhere in a React tree to measure the cost of rendering that part of the tree.
+-It requires two props: an id (string) and an onRender callback (function)
+-For example, to profile a Navigation component and its descendants:
+ <Profiler id="Navigation" onRender={callbackToProcessRenderInfo}>
+    <Navigation {...props} />
+ </Profiler>
+ function callbackToProcessRenderInfo(id, phase, actualDuration, baseDuration, startTime, commitTime) {
+  // we can log it to a database or render it out as a chart 
+  logToDatabase({ id, phase, actualDuration, baseDuration, startTime, commitTime })
+}
+-Profiling adds some additional overhead, so it is disabled in the production build.
+-Although Profiler is a light-weight component, it should be used only when necessary.
+
+Pre-requisites:
+---------------
+-The application should have React version 16.5 or above.
+-The React DevTools Extension needs to be installed in your browser.
+
+<Profiler id="counterExample" onRender={console.log}>
+    <StateDemo2 />
+</Profiler>
