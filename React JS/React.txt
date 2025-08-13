@@ -2077,6 +2077,27 @@ Redux
 
 View/UI-----> Action --> Reducer --> Store/State --> View
 
+3 Core Concepts in Redux
+========================
+1. Store : Holds the state(data) of our application. (shop)
+2. Action : Describes the changes in the state of the application. 
+			(what happened)(purchase a TV)
+3. Reducer : Ties the store and actions together. (shopKeeper)
+
+
+
+3 Principles
+===========
+1. The state of our whole application is stored in an object tree within a single store.
+   Maintain your whole application state in a single object which would be managed by the Redux store.
+    
+2. The only way to change the state is to emit action, an object describing what happened.
+   To update the state of your app , you need to let Redux know about that with an action.
+   Not allowed to directly update the state object.
+
+3. To specify how the state tree is transformed by actions. You write pure Reducers.
+   These ensures that neither the views nor the network callbacks will ever write directly to the state
+   Reducer - (previous state, action)=>newState
 
 
 
