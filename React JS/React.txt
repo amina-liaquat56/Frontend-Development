@@ -2108,9 +2108,13 @@ Store
 -Register Listeners via subscribe(listner)
 -Handles unregistering of listners via the function returned by subscribe(listner).
 
-
-
-
+Actions
+=======
+-The only way your application can interact with the store.
+-carry some information from your React application to the Redux store.
+-plain javascript objects.
+-Have a 'type'  property that indicates the type of action being performed.
+-The type of property is typically defined as a string constants.
 
 
 
