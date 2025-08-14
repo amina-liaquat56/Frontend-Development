@@ -2177,10 +2177,16 @@ Thunks vs Sagas
 -Pure functions are desirable from a testing standpoint because they are predictable and repeatable, which makes them relatively easy to test.
 -Sagas are implemented through special functions called generator functions.
 
-
-
-
-
+React Hooks
+===========
+-A Hook is a special function that lets you “hook into” React features. 
+ ex: useState is a Hook that lets you add React state to function components. 
+-Hooks are a new addition in React 16.8
+-React Hooks allow to use state , lifecycle features and other features without writing a class.
+-React has built-in hooks 
+	useState(), useEffect(), useRef(), useContext(), useReducer(), 
+	useCallBack(), useMemo(), useId(),useDebugValue(),useDeferredValue() 
+-we can also create our own Hooks to reuse stateful behavior between different components.
 
 
 
