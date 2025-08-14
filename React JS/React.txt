@@ -2169,6 +2169,14 @@ Thunks
 -a thunk is a function that (optionally) takes some parameters and returns another function. 
  The inner function takes a dispatch function and a getState function -- both of which will be supplied by the Redux-Thunk middleware.
 
+Thunks vs Sagas
+===============
+-Redux-thunk and Redux-saga are both middleware libraries for Redux. 
+-Redux-Saga in comparison to Redux-Thunk is that you can more easily test your asynchronous data flow.
+-Redux-Saga allows to express complex application logic as pure functions called sagas.
+-Pure functions are desirable from a testing standpoint because they are predictable and repeatable, which makes them relatively easy to test.
+-Sagas are implemented through special functions called generator functions.
+
 
 
 
