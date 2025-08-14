@@ -2188,6 +2188,225 @@ React Hooks
 	useCallBack(), useMemo(), useId(),useDebugValue(),useDeferredValue() 
 -we can also create our own Hooks to reuse stateful behavior between different components.
 
+Rules of Hooks
+==============
+-Only call Hooks at the top level. 
+ Don’t call Hooks inside loops, conditions, or nested functions.
+-Only call Hooks from React function components. 
+ Don’t call Hooks from regular JavaScript functions.
+-React built-in Hooks can be called from custom hooks.
+
+
+useState
+--------
+ex: const [count, setCount] = useState(0);
+-useState is used to declare a state variable.
+-The only argument to the useState() Hook is the initial state.
+-It returns a pair of values: 
+  a. the current state 
+  b. a function that updates it. 
+  
+  
+const [count, setCount] = useState(0);
+			(OR)
+var countStateVariable = useState(0); // Returns a pair
+var count = countStateVariable[0]; // First item in a pair
+var setCount = countStateVariable[1]; //second item
+
+
+useEffect
+---------
+-useEffect serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount.
+-pass a callBack Function as 1st arguement & an empty array as a second argument to useEffect().
+-array contains so called dependencies for useEffect, that is, variables on which useEffect depends on to re-run.
+-When the array is empty, the effect runs only once.
+-If 2nd arguement is present, effect will only activate if the values in the list change.
+-you cannot return a Promise from useEffect.
+
+
+
+useReducer
+----------
+-useReducer is a hook,convenient for dealing with more complex state changes in React components.
+-useReducer borrows some theory from Redux,the concepts of reducers, action, and dispatch.
+-useReducer Hook accepts two arguments. 
+ useReducer(<reducer>, <initialState>)
+-The useReducer Hook returns the current state and a dispatch method.
+ const [todos, dispatch] = useReducer(reducer, initialTodos);
+
+
+Redux:
+-----
+-centralised state (Application State)
+-adds more de-coupling
+-has middlewares: Thunk , sagas , logger
+-actions can only hit one Store
+-more suitable for big projects
+
+useReducer:
+----------
+-local state (Component State)
+-comes with other native hooks
+-no extra dependencies needed
+-multiple stores maybe(reducers that can act as store)
+-more suitable for small projects
+
+
+useId()
+-------
+-useId() is a hook for generating unique IDs that can be used with HTML Elements.
+-useId is not for generating keys in a list. Keys should be generated from your data.
+- Ex:
+	<label htmlFor={id}>Do you like React?</label>
+    <input id={id} type="checkbox" name="react"/>
+-For multiple IDs in the same component, append a suffix using the same id.
+   <label htmlFor={id + '-firstName'}>First Name</label>
+   <input id={id + '-firstName'} type="text" />
+   
+   <label htmlFor={id + '-lastName'}>Last Name</label>   
+   <input id={id + '-lastName'} type="text" />
+
+
+Custom Hook
+===========
+-Custom Hooks are reusable functions.
+-When you have component logic that needs to be used by multiple components, 
+ we can extract that logic to a custom Hook.
+-A custom Hook is a JavaScript function whose name starts with ”use” and that 
+ may call other Hooks.
+-Helps to Avoid repetitive and redundant stateful logic inside multiple components.
+-Custom Hooks offer the flexibility of sharing logic.
+-Each call to a Custom Hook gets isolated state.
+
+
+
+Unit Testing
+============
+-Unit testing is a great discipline which can lead to 40%-80% reductions in production bug density.
+-Improves our application architecture and maintainability.
+-Provides quick feedback on file-save, tells you whether the changes you made worked or not. 
+-This can replace console.log() and clicking around in the UI to test changes. 
+
+
+Jest 
+=====
+-Jest is an open-source test framework created by Facebook.
+-It includes a command line tool for test execution similar to what Jasmine and Mocha offer.
+-Jest offers a really nice feature called “snapshot testing” 
+ which helps us check and verify the component rendering result.
+-create-react-app ships/comes with jest, no need to install it explicitly.
+-install react testing library
+  npm i @testing-library/react
+-need to add 'jest-dom' for jest matchers.
+  npm i @testing-library/jest-dom
+-need to add 'react-test-renderer' for rendering snapshots.
+  npm i react-test-renderer
+
+ 
+
+-To run testcases,run the below command
+ npm run test / npm test
+-To run only 1 test file
+ npm test -- abc.spec.js
+-To run only one test with Jest, temporarily change that test command to a test.only
+ test.only("renders learn react link", () => { 
+ });
+ 
+
+ 
+
+terminologies:                               
+-------------
+describe() 
+-An optional method to wrap a group of tests.(test-suite = number of test cases)
+-describe() takes 2 arguements. 1. string(message) 2. callback function
+-message = some text that explains the nature of the group of tests conducted within it. 
+-the describe() text acts as a header before the test results are shown.
+
+it() (OR) test()
+-a method to write a test-case.
+-it() takes 2 arguements. 1. string(message) 2. callback function
+-it() allows us to write some text describing what a test should successfully achieve. 
+-test() method can be used instead of it() and vice-versa.Both are valid methods.
+-test.only() executes only that test-case from that files & test-cases from other files skips the test-cases present in the same file
+
+expect() 
+-The expect() compares actual value with the expected value.
+-ex: expect(add(2,3)).toBe(5);
+    actual=method's return value   expeted=5
+ 
+
+
+Jest Matchers
+=============
+toBe()           // primitives
+not.toBe()
+toEqual() 		// object/ array
+not.toEqual()
+toBeNull()
+toBeDefined()
+toBeUndefined()
+toBeTruthy()	 // 1/true/'sanjay'/-5
+toBeFalsy()		 // false/ 0 / undefined / null / ''
+toBeGreaterThan()
+toBeGreaterThanOrEqual()
+toBeLessThan()
+toBeLessThanOrEqual()
+toMatch(regex)
+toContain()
+
+
+Jest Global Functions
+=====================
+beforeAll()       - Before All the Testcases (1)
+beforeEach()      - Before Each Test case    (n)
+afterEach()		  - After Each Test case     (n)
+afterAll()        - After all the testcases  (1)
+
+it.skip()    - skips this test case, executes other test cases
+it.only()    - executes only this test case, skips other testcases
+
+https://create-react-app.dev/docs/debugging-tests/
+
+
+Snapshot Testing
+----------------
+-Snapshot tests are a very useful tool whenever you want to make sure your UI does not change unexpectedly.
+
+-if the component name is 'button',create a folder '__test__' inside button folder add test file 'button.test.js' or 'button.spec.js'
+-snapshot testing adds a __snapshots__ folder inside __test__ folder
+ if any accidental change happens, testcase will fail
+ Press u to update failing snapshots.
+ 
+ 
+
+ 
+
+Server Side Rendering
+=====================
+-Initially, everything was processed on the server and an HTML page was 
+ delivered to the client-side browser to display a web page.
+-This worked great until more interactive content started being displayed on the web pages
+-Every time some new interactivity had to be handled, the whole page was re-compiled by the server
+-With more complex websites being made, server-side rendering (SSR) became slow and inefficient
+
+-client-side rendering is a process where the browser renders the HTML page by modifying DOM.
+-For any interactivity, the browser does not need to contact the server since all the code is run on the client-side
+-The user needs fast internet and an up-to-date browser to avoid issues in displaying the content
+-making the initial loading slower and not SEO friendly
+
+
+
+GraphQL
+=======
+-GraphQL overcomes major shortcomings of REST.
+-A query language for your API.
+-in REST, the client makes an HTTP request and data is sent as an HTTP Response.
+-in GraphQL,the client Requests the data with queries.
+-it allows the client to query only the data that they need.
+
+-The most popular  GraphQL library is Apollo Client.
+
 
 
 
