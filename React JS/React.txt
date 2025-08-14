@@ -2158,6 +2158,17 @@ REDUX Middlewares
  
 store-->view --> Action --> Middleware --> Reducer --> Store
 
+Thunks
+======
+-Thunks are the standard approach for writing async logic in Redux apps.
+-Redux thunk allows to call action creators, which then returns a function 
+ instead of an action object. 
+ This function receives the store’s dispatch method, which is then used to dispatch the regular synchronous actions within the function’s body once the asynchronous operations is completed. 
+-This feature of thunk redux also allows us dispatch after certain conditions are met. 
+-Redux-Thunk allows you to dispatch special functions, called thunks.
+-a thunk is a function that (optionally) takes some parameters and returns another function. 
+ The inner function takes a dispatch function and a getState function -- both of which will be supplied by the Redux-Thunk middleware.
+
 
 
 
