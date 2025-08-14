@@ -2149,6 +2149,16 @@ Redux Toolkit
 	Read data from the store with the useSelector hook
 	Get the dispatch function with the useDispatch hook, and dispatch actions as needed
 
+REDUX Middlewares
+=================
+-basic Redux store enables to perform synchronous updates only. 
+ Middleware Redux extends the store’s capabilities. 
+ Redux middleware acts as a medium to interact with dispatched actions before they reach the reducer.
+-Middleware helps with logging, error reporting, making asynchronous requests.
+ 
+store-->view --> Action --> Middleware --> Reducer --> Store
+
+
 
 
 
