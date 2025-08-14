@@ -2116,6 +2116,18 @@ Actions
 -Have a 'type'  property that indicates the type of action being performed.
 -The type of property is typically defined as a string constants.
 
+Reducers
+=========
+-Specify how the application state changes in response to actions sent to the store.
+-Function that accepts state and actions as arguement, and returns the next state of the application.
+-reducer1(previous state, action)=>newState
+-Instead of mutating the state directly,we specify the mutations you want to 
+ happen with plain objects called actions.
+-Then we write a special function called a Reducer to decide how every action transforms the entire applications state.
+
+
+Context API: useful and ideal for small applications where state changes are minimal.
+Redux: Perfect for larger applications where there are high-frequency state updates.Redux gives a more structural and advanced way of doing state management.
 
 
 
